@@ -1,0 +1,16 @@
+jb
+# Log for file transfer to BOM_0125_proto
+## Restart files and config files
+`archive` copied from /lustre/f2/scratch/gfdl/oar.gfdl.ogrp-account/work/CMIP6/OMIP/xanadu_mom6_20181101/OM4p125_IAF_csf_JRA55do1-3_r5_cycle4.o348634/output.stager/lustre/f2/scratch/oar.gfdl.ogrp-account/CMIP6/OMIP/xanadu_mom6_20181101/OM4p125_IAF_csf_JRA55do1-3_r5_cycle4/ncrc4.intel16f2-prod
+
+This was the physics only run for the OMIP6 experiment, which I will use as a base for the BOM_0125 prototype.
+
+Further steps: 
+
+I removed the earlier year and all output with: 
+rm -r ./archive/restart/20010101 ./archive/history/20000101.nc ./archive/ascii/20000101.ascii_out ./archive/history
+
+## Grid files
+`input_files/grid/tripolar_disp_res8_grid_data.tar` is copied from /archive/Niki.Zadeh/input/xanadu/OM4p125_grid/tripolar_disp_res8_grid_data.tar in accordance to the xml file in `archive/restart/OMIP4_JRA_r5.xml`.
+
+
