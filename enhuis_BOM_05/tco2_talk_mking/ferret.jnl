@@ -1,0 +1,26 @@
+ ! NOAA/PMEL TMAP
+ ! PyFerret v7.4 (optimized)
+ ! Linux 3.10.0-514.21.1.el7.x86_64 - 05/16/18
+ ! 16-May-19 13:57     
+
+set mode verify
+use TCO2_v2_correct_to_1777.nc
+use TCO2_v2_correct_to_1958.nc
+show data
+shade tco2[k=1,d=1]
+set win 2;shade tco2[k=1,d=2]
+shade tco2[d=1,x=180]
+set win 2;shade tco2[d=2,x=180]
+set win 1;shade tco2[d=1,x=180]
+set win 1;shade/lev=(1840,2400,50) tco2[d=1,x=180]
+set win 2;shade/lev=(1840,2400,50) tco2[d=2,x=180]
+set win 3;shade tco2[d=2,x=180]-tco2[d=1,x=180]
+set win 3;shade/lev=(-30,30,2) tco2[d=2,x=180]-tco2[d=1,x=180]
+set win 3;shade/lev=(-30,30,2) tco2[d=2,x=40]-tco2[d=1,x=40]
+shade tco2[d=1,x=180]
+shade tco2[d=1,k=1]
+set win 3;shade/lev=(-30,30,2) tco2[d=2,x=30]-tco2[d=1,x=30]
+set win 1
+shade tco2[d=1,k=1]
+set win 3;shade/lev=(-30,30,2) tco2[d=2,x=-30]-tco2[d=1,x=-30]
+q

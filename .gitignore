@@ -1,4 +1,5 @@
 *.nc*
+*.mat
 
 input_files
 archive

@@ -1,0 +1,6 @@
+f4312299ac3060b8084ef699a9ffec20  ./tco2_talk_mking/GLODAPv2.2016b.TAlk.nc
+7b46362491249e104b92c86747c76bf4  ./tco2_talk_mking/GLODAPv2.2016b.TCO2.nc
+6d7a2b206bb7c6528baf0e0758946626  ./tco2_talk_mking/Khatiwala_DIC_inversion.nc
+984fa709d6fcd2ec24280bb03cc5595a  ./tco2_talk_mking/TAlk_v2.nc
+280b2a5636a961d5bb01e999425a6896  ./tco2_talk_mking/TCO2_v2_correct_to_1777.nc
+61cc05993727b85229abaa4954ae4f19  ./tco2_talk_mking/TCO2_v2_correct_to_1958.nc
