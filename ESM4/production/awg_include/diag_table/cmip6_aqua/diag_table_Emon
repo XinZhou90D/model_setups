@@ -1,0 +1,30 @@
+##################
+# Table: Emon
+# Version: 1.00.15
+##################
+
+ "atmos_level_cmip",         1, "months",    1,  "days",  "time",
+
+##################
+
+##. Tendency of Air Temperature due to Clear Sky Longwave Radiative Heating, K s-1 (longitude,latitude,alevel,time)
+ "radiation",     "tntrlcs",       "tntrlcs",       "atmos_level_cmip",        "all",  .true.,  "none", 2
+
+##. Tendency of Air Temperature due to Clear Sky Shortwave Radiative Heating, K s-1 (longitude,latitude,alevel,time)
+ "radiation",     "tntrscs",       "tntrscs",       "atmos_level_cmip",        "all",  .true.,  "none", 2
+
+##. Tendency of Air Temperature due to Numerical Diffusion, K s-1 (longitude,latitude,alevel,time)
+#"UNKNOWN",       "tntd",          "tntd",          "atmos_level_cmip",        "all",  .true.,  "none", 2
+
+##. Tendency of Air Temperature Due to Boundary Layer Mixing, K s-1 (longitude,latitude,alevel,time)
+ "vert_diff",     "tntpbl",        "tntpbl",        "atmos_level_cmip",        "all",  .true.,  "none", 2
+
+##. Tendency of Air Temperature Due to Stratiform Clouds and Precipitation, K s-1 (longitude,latitude,alevel,time)
+ "moist",         "tntscp",        "tntscp",        "atmos_level_cmip",        "all",  .true.,  "none", 2
+
+##. Tendency of Specific Humidity Due to Boundary Layer Mixing, s-1 (longitude,latitude,alevel,time)
+ "vert_diff",     "tnhuspbl",      "tnhuspbl",      "atmos_level_cmip",        "all",  .true.,  "none", 2
+
+##. Tendency of Specific Humidity Due to Stratiform Clouds and Precipitation, s-1 (longitude,latitude,alevel,time)
+ "moist",         "tnhusscp",      "tnhusscp",      "atmos_level_cmip",        "all",  .true.,  "none", 2
+

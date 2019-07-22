@@ -1,0 +1,22 @@
+#############
+# Table: Oday
+#############
+
+"ocean_phys_daily",           1, "days",      1,  "days",   "time"
+
+
+##################
+# ocean_phys_daily
+##################
+
+## Mean Daily Maximum Ocean Mixed Layer Thickness Defined by Mixing Scheme, m (longitude,latitude)
+## Oday. CMIP5 (P-1)
+ "ocean_model",   "omldamax",               "omldamax",      "ocean_phys_daily",          "all",   .max.,  "none", 2
+
+## Sea Surface Temperature, degC (longitude,latitude): Priority 1,3
+## Oday. CMIP5 (P-3), CORDEX (P-1)
+ "ocean_model",   "tos",                    "tos",           "ocean_phys_daily",          "all",  .true.,  "none", 2
+
+## Square of Sea Surface Temperature, degC2 (longitude,latitude): Priority 1,3
+## Oday. CMIP5 (P-1)
+ "ocean_model",   "tossq",                  "tossq",         "ocean_phys_daily",          "all",  .true.,  "none", 2

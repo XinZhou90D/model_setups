@@ -1,0 +1,528 @@
+# this should include all cosp requests except for 
+# jpdftaureicemodis
+# jpdftaureliqmodis
+
+###############
+## Realm: atmos
+###############
+#
+#"atmos_hourly",               1, "hours",     1,  "days",   "time"
+#"atmos_month",                 1, "months",    1,  "days",   "time"
+#"atmos_month_plev19",         1, "months",    1,  "days",   "time"
+#"atmos_month_plev39",         1, "months",    1,  "days",   "time"
+"atmos_month_plev7",           1, "months",    1,  "days",   "time"
+"atmos_month_alt16",           1, "months",    1,  "days",   "time"
+"atmos_month_alt40",           1, "months",    1,  "days",   "time"
+ "atmos_month_cmip",         1, "months",    1,  "days",  "time",
+#"atmos_month_cosp",            1, "months",    1,  "days",   "time"
+#"atmos_static_inst",         -1, "months",    1,  "days",   "time"
+#"atmos_subhourly_sites",      0, "hours",     1,  "days",   "time"
+#
+##. CALIPSO Percentage Cloud Cover, % (longitude,latitude,alt40,time)
+ "cmip",          "ap",            "ap",            "atmos_month_cmip",        "all",  .false., "none", 1
+ "cmip",          "b",             "b",             "atmos_month_cmip",        "all",  .false., "none", 1
+ "cmip",          "ap_bnds",       "ap_bnds",       "atmos_month_cmip",        "all",  .false., "none", 1
+ "cmip",          "b_bnds",        "b_bnds",        "atmos_month_cmip",        "all",  .false., "none", 1
+ "cmip",          "lev_bnds",      "lev_bnds",      "atmos_month_cmip",        "all",  .false., "none", 1
+#
+##############
+## atmos_month
+##############
+## REALMS:   atmos, atmos_atmosChem              GROUPS: AERmon, Amon, CFmon, Emon
+## FREQS:    mon, monClim                        MIPS:   AerChemMIP, CFMIP, CMIP, CMIP5, DCPP, DynVar, HighResMIP, ISMIP6, PMIP, RFMIP, VIACSAB
+## PRIORITY: 1, 2, 3                            
+## Fields:   119
+#
+### CloudSat Radar Reflectivity CFAD, 1.0 (longitude,latitude,alt40)
+### Emon. CFMIP (P-1)
+##"UNKNOWN",       "cfadDbze94",             "cfadDbze94",    "atmos_month",               "all",  .true.,  "none", 2
+"cosp", "cloudsatcfad_1",  "cfadDbze94_1",  "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "cloudsatcfad_2",  "cfadDbze94_2",  "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "cloudsatcfad_3",  "cfadDbze94_3",  "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "cloudsatcfad_4",  "cfadDbze94_4",  "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "cloudsatcfad_5",  "cfadDbze94_5",  "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "cloudsatcfad_6",  "cfadDbze94_6",  "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "cloudsatcfad_7",  "cfadDbze94_7",  "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "cloudsatcfad_8",  "cfadDbze94_8",  "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "cloudsatcfad_9",  "cfadDbze94_9",  "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "cloudsatcfad_10", "cfadDbze94_10", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "cloudsatcfad_11", "cfadDbze94_11", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "cloudsatcfad_12", "cfadDbze94_12", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "cloudsatcfad_13", "cfadDbze94_13", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "cloudsatcfad_14", "cfadDbze94_14", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "cloudsatcfad_15", "cfadDbze94_15", "atmos_month_cmip", "all", .true., "none", 2
+
+#
+### CALIPSO Scattering Ratio CFAD, 1.0 (longitude,latitude,alt40)
+### Emon. CFMIP (P-1)
+##"UNKNOWN",       "cfadLidarsr532",         "cfadLidarsr532", "atmos_month",               "all",  .true.,  "none", 2
+"cosp", "calipsosrcfad_1", "cfadLidarsr532_1",  "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "calipsosrcfad_2", "cfadLidarsr532_2",  "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "calipsosrcfad_3", "cfadLidarsr532_3",  "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "calipsosrcfad_4", "cfadLidarsr532_4",  "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "calipsosrcfad_5", "cfadLidarsr532_5",  "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "calipsosrcfad_6", "cfadLidarsr532_6",  "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "calipsosrcfad_7", "cfadLidarsr532_7",  "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "calipsosrcfad_8", "cfadLidarsr532_8",  "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "calipsosrcfad_9", "cfadLidarsr532_9",  "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "calipsosrcfad_10","cfadLidarsr532_10", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "calipsosrcfad_11","cfadLidarsr532_11", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "calipsosrcfad_12","cfadLidarsr532_12", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "calipsosrcfad_13","cfadLidarsr532_13", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "calipsosrcfad_14","cfadLidarsr532_14", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "calipsosrcfad_15","cfadLidarsr532_15", "atmos_month_cmip", "all", .true., "none", 2
+#
+#
+### Global Mean Mole Fraction of CH4, 1e-09 ()
+### Amon. CFMIP (P-1), CMIP5 (P-1), HighResMIP (P-1), PMIP (P-1)
+# "radiation",     "rrvch4",                 "ch4global",     "atmos_month",               "all",  .true.,  "none", 2
+#
+### Global Mean Mole Fraction of CH4, 1e-09 ()
+### Amon. CFMIP (P-1), CMIP5 (P-1), HighResMIP (P-1), PMIP (P-1)
+##"UNKNOWN",       "ch4globalClim",          "ch4globalClim", "atmos_month",               "all",  .true.,  "none", 2
+#
+### Fraction of Time Convection Occurs in Cell, 1.0 (longitude,latitude)
+### Amon. CFMIP (P-1), CMIP5 (P-1), HighResMIP (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+# "moist",         "conv_freq",              "ci",            "atmos_month",               "all",  .true.,  "none", 2
+#
+### Percentage Cloud Cover, % (longitude,latitude,alevel): Priority 1,2
+### Amon. AerChemMIP (P-1), CFMIP (P-1), CMIP5 (P-1), HighResMIP (P-1), PMIP (P-1), VIACSAB (P-1)
+# "moist",         "tot_cloud_area",         "cl",            "atmos_month",               "all",  .true.,  "none", 2
+#
+### Convective Cloud Area Fraction, % (longitude,latitude,alevel): Priority 1,2
+### CFmon. AerChemMIP (P-1), CFMIP (P-2), CMIP5 (P-2), HighResMIP (P-2), PMIP (P-1)
+##"UNKNOWN",       "clc",                    "clc",           "atmos_month",               "all",  .true.,  "none", 2
+#
+### CALIPSO Percentage Cloud Cover, % (longitude,latitude,alt40)
+### CFmon. CFMIP (P-1), CMIP5 (P-1), HighResMIP (P-1), RFMIP (P-1)
+#
+### CALIPSO ice cloud Fraction, % (longitude,latitude,alt40)
+### Emon. CFMIP (P-1)
+"cosp",       "clcalipsoice",           "clcalipsoice",  "atmos_month_cmip",               "all",  .true.,  "none", 2
+#
+### CALIPSO liquid cloud Fraction, % (longitude,latitude,alt40)
+### Emon. CFMIP (P-1)
+"cosp",       "clcalipsoliq",           "clcalipsoliq",  "atmos_month_cmip",               "all",  .true.,  "none", 2
+#
+#
+### Mass Fraction of Cloud Ice, kg kg-1 (longitude,latitude,alevel)
+### Amon. AerChemMIP (P-1), CFMIP (P-1), CMIP5 (P-1), HighResMIP (P-1), VIACSAB (P-1)
+# "moist",         "cli",                    "cli",           "atmos_month",               "all",  .true.,  "none", 2
+#
+# MODIS
+##"UNKNOWN_plev7", "jpdftaureicemodis",      "jpdftaureicemodis_unmsk", "atmos_month_plev7",         "all",  .true.,  "none", 2
+"cosp", "taurefficemodis_1_1",   "jpdftaureicemodis_1_1",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_2_1",   "jpdftaureicemodis_2_1",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_3_1",   "jpdftaureicemodis_3_1",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_4_1",   "jpdftaureicemodis_4_1",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_5_1",   "jpdftaureicemodis_5_1",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_6_1",   "jpdftaureicemodis_6_1",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_7_1",   "jpdftaureicemodis_7_1",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+
+"cosp", "taurefficemodis_1_2",   "jpdftaureicemodis_1_2",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_2_2",   "jpdftaureicemodis_2_2",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_3_2",   "jpdftaureicemodis_3_2",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_4_2",   "jpdftaureicemodis_4_2",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_5_2",   "jpdftaureicemodis_5_2",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_6_2",   "jpdftaureicemodis_6_2",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_7_2",   "jpdftaureicemodis_7_2",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+
+"cosp", "taurefficemodis_1_3",   "jpdftaureicemodis_1_3",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_2_3",   "jpdftaureicemodis_2_3",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_3_3",   "jpdftaureicemodis_3_3",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_4_3",   "jpdftaureicemodis_4_3",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_5_3",   "jpdftaureicemodis_5_3",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_6_3",   "jpdftaureicemodis_6_3",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_7_3",   "jpdftaureicemodis_7_3",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+
+"cosp", "taurefficemodis_1_4",   "jpdftaureicemodis_1_4",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_2_4",   "jpdftaureicemodis_2_4",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_3_4",   "jpdftaureicemodis_3_4",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_4_4",   "jpdftaureicemodis_4_4",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_5_4",   "jpdftaureicemodis_5_4",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_6_4",   "jpdftaureicemodis_6_4",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_7_4",   "jpdftaureicemodis_7_4",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+
+"cosp", "taurefficemodis_1_5",   "jpdftaureicemodis_1_5",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_2_5",   "jpdftaureicemodis_2_5",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_3_5",   "jpdftaureicemodis_3_5",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_4_5",   "jpdftaureicemodis_4_5",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_5_5",   "jpdftaureicemodis_5_5",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_6_5",   "jpdftaureicemodis_6_5",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_7_5",   "jpdftaureicemodis_7_5",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+
+"cosp", "taurefficemodis_1_6",   "jpdftaureicemodis_1_6",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_2_6",   "jpdftaureicemodis_2_6",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_3_6",   "jpdftaureicemodis_3_6",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_4_6",   "jpdftaureicemodis_4_6",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_5_6",   "jpdftaureicemodis_5_6",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_6_6",   "jpdftaureicemodis_6_6",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_7_6",   "jpdftaureicemodis_7_6",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+
+"cosp", "taurefficemodis_1_7",   "jpdftaureicemodis_1_7",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_2_7",   "jpdftaureicemodis_2_7",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_3_7",   "jpdftaureicemodis_3_7",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_4_7",   "jpdftaureicemodis_4_7",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_5_7",   "jpdftaureicemodis_5_7",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_6_7",   "jpdftaureicemodis_6_7",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taurefficemodis_7_7",   "jpdftaureicemodis_7_7",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+
+"cosp", "taureffliqmodis_1_1",   "jpdftaureliqmodis_1_1",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_2_1",   "jpdftaureliqmodis_2_1",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_3_1",   "jpdftaureliqmodis_3_1",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_4_1",   "jpdftaureliqmodis_4_1",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_5_1",   "jpdftaureliqmodis_5_1",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_6_1",   "jpdftaureliqmodis_6_1",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_7_1",   "jpdftaureliqmodis_7_1",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+
+"cosp", "taureffliqmodis_1_2",   "jpdftaureliqmodis_1_2",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_2_2",   "jpdftaureliqmodis_2_2",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_3_2",   "jpdftaureliqmodis_3_2",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_4_2",   "jpdftaureliqmodis_4_2",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_5_2",   "jpdftaureliqmodis_5_2",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_6_2",   "jpdftaureliqmodis_6_2",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_7_2",   "jpdftaureliqmodis_7_2",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+
+"cosp", "taureffliqmodis_1_3",   "jpdftaureliqmodis_1_3",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_2_3",   "jpdftaureliqmodis_2_3",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_3_3",   "jpdftaureliqmodis_3_3",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_4_3",   "jpdftaureliqmodis_4_3",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_5_3",   "jpdftaureliqmodis_5_3",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_6_3",   "jpdftaureliqmodis_6_3",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_7_3",   "jpdftaureliqmodis_7_3",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+
+"cosp", "taureffliqmodis_1_4",   "jpdftaureliqmodis_1_4",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_2_4",   "jpdftaureliqmodis_2_4",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_3_4",   "jpdftaureliqmodis_3_4",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_4_4",   "jpdftaureliqmodis_4_4",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_5_4",   "jpdftaureliqmodis_5_4",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_6_4",   "jpdftaureliqmodis_6_4",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_7_4",   "jpdftaureliqmodis_7_4",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+
+"cosp", "taureffliqmodis_1_5",   "jpdftaureliqmodis_1_5",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_2_5",   "jpdftaureliqmodis_2_5",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_3_5",   "jpdftaureliqmodis_3_5",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_4_5",   "jpdftaureliqmodis_4_5",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_5_5",   "jpdftaureliqmodis_5_5",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_6_5",   "jpdftaureliqmodis_6_5",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_7_5",   "jpdftaureliqmodis_7_5",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+
+"cosp", "taureffliqmodis_1_6",   "jpdftaureliqmodis_1_6",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_2_6",   "jpdftaureliqmodis_2_6",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_3_6",   "jpdftaureliqmodis_3_6",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_4_6",   "jpdftaureliqmodis_4_6",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_5_6",   "jpdftaureliqmodis_5_6",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_6_6",   "jpdftaureliqmodis_6_6",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_7_6",   "jpdftaureliqmodis_7_6",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+
+"cosp", "taureffliqmodis_1_7",   "jpdftaureliqmodis_1_7",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_2_7",   "jpdftaureliqmodis_2_7",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_3_7",   "jpdftaureliqmodis_3_7",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_4_7",   "jpdftaureliqmodis_4_7",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_5_7",   "jpdftaureliqmodis_5_7",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_6_7",   "jpdftaureliqmodis_6_7",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+"cosp", "taureffliqmodis_7_7",   "jpdftaureliqmodis_7_7",               "atmos_month_cmip",         "all",  .true.,   "none", 2
+
+### MODIS Ice Cloud Area Percentage, % (longitude,latitude)
+### Emon. CFMIP (P-1)
+"cosp",       "iclmodis",               "climodis",      "atmos_month_cmip",               "all",  .true.,  "none", 2
+##. MODIS Liquid Cloud Fraction, % (longitude,latitude,time)
+"cosp",       "lclmodis",               "clwmodis",      "atmos_month_cmip",               "all",  .true.,  "none", 2
+#
+### Ice Water Path, kg m-2 (longitude,latitude)
+### Amon. AerChemMIP (P-1), CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), HighResMIP (P-1), ISMIP6 (P-1), PMIP (P-1)
+# "moist",         "IWP_all_clouds",         "clivi",         "atmos_month",               "all",  .true.,  "none", 2
+#
+### Percentage Cloud Cover as Calculated by the MISR Simulator, % (longitude,latitude,alt16)
+### Emon. CFMIP (P-1)
+##"UNKNOWN",       "clmisr",                 "clmisr",        "atmos_month",               "all",  .true.,  "none", 2
+ "cosp", "misr_1",  "clmisr_1",  "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "misr_2",  "clmisr_2",  "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "misr_3",  "clmisr_3",  "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "misr_4",  "clmisr_4",  "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "misr_5",  "clmisr_5",  "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "misr_6",  "clmisr_6",  "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "misr_7",  "clmisr_7",  "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "misr_8",  "clmisr_8",  "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "misr_9",  "clmisr_9",  "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "misr_10", "clmisr_10", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "misr_11", "clmisr_11", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "misr_12", "clmisr_12", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "misr_13", "clmisr_13", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "misr_14", "clmisr_14", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "misr_15", "clmisr_15", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "misr_16", "clmisr_16", "atmos_month_cmip", "all", .true., "none", 2
+
+#
+### Total Cloud Cover Percentage, % (longitude,latitude)
+### Amon. AerChemMIP (P-1), CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-1), HighResMIP (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+# already present in diag_table_Amon
+#"moist",         "cld_amt_2d",             "clt",       "atmos_month_cmip",               "all",  .true.,  "none", 2
+#
+### MODIS Total Cloud Cover Percentage, % (longitude,latitude)
+### Emon. CFMIP (P-1)
+"cosp",       "tclmodis",               "cltmodis",      "atmos_month_cmip",               "all",  .true.,  "none", 2
+#
+### PARASOL Reflectance, 1.0 (longitude,latitude)
+### Emon. CFMIP (P-1), HighResMIP (P-1)
+"cosp",       "parasol_refl",            "parasolRefl",   "atmos_month_cmip",               "all",  .true.,  "none", 2
+#
+#
+####################
+## atmos_month_plev7
+####################
+## REALMS:   atmos                               GROUPS: CFmon, Emon
+## FREQS:    mon                                 MIPS:   CFMIP, CMIP5, HighResMIP, PMIP, RFMIP
+## PRIORITY: 1                                  
+## Fields:   3
+#
+### MODIS Optical Thickness-Particle Size joint  distribution, ice, % (longitude,latitude,plev7c)
+### Emon. CFMIP (P-1)
+##"UNKNOWN_plev7", "jpdftaureicemodis",      "jpdftaureicemodis_unmsk", "atmos_month_plev7",         "all",  .true.,  "none", 2
+#
+### MODIS Optical Thickness-Particle Size joint  distribution, liquid, % (longitude,latitude,plev7c)
+### Emon. CFMIP (P-1)
+##"UNKNOWN_plev7", "jpdftaureliqmodis",      "jpdftaureliqmodis_unmsk", "atmos_month_plev7",         "all",  .true.,  "none", 2
+#
+#
+### MODIS Optical Thickness-Cloud Top Pressure joint  distribution, % (longitude,latitude,plev7c)
+## not part of the data request, but useful
+#"cosp", "tauctpmodis_1", "tauctpmodis_1", "atmos_month_plev7", "all", .true., "none", 2
+#"cosp", "tauctpmodis_2", "tauctpmodis_2", "atmos_month_plev7", "all", .true., "none", 2
+#"cosp", "tauctpmodis_3", "tauctpmodis_3", "atmos_month_plev7", "all", .true., "none", 2
+#"cosp", "tauctpmodis_4", "tauctpmodis_4", "atmos_month_plev7", "all", .true., "none", 2
+#"cosp", "tauctpmodis_5", "tauctpmodis_5", "atmos_month_plev7", "all", .true., "none", 2
+#"cosp", "tauctpmodis_6", "tauctpmodis_6", "atmos_month_plev7", "all", .true., "none", 2
+#"cosp", "tauctpmodis_7", "tauctpmodis_7", "atmos_month_plev7", "all", .true., "none", 2
+# 
+#
+###################
+# Table: CFmon
+# Version: 1.00.15
+###################
+
+##. Upwelling Longwave Radiation, W m-2 (longitude,latitude,alevhalf,time)
+#"UNKNOWN",       "rlu",           "rlu",           "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Upwelling Shortwave Radiation, W m-2 (longitude,latitude,alevhalf,time)
+ "radiation",     "rsu",           "rsu",           "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Downwelling Longwave Radiation, W m-2 (longitude,latitude,alevhalf,time)
+#"UNKNOWN",       "rld",           "rld",           "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Downwelling Shortwave Radiation, W m-2 (longitude,latitude,alevhalf,time)
+ "radiation",     "rsd",           "rsd",           "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Upwelling Clear-Sky Longwave Radiation, W m-2 (longitude,latitude,alevhalf,time)
+#"UNKNOWN",       "rlucs",         "rlucs",         "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Upwelling Clear-Sky Shortwave Radiation, W m-2 (longitude,latitude,alevhalf,time)
+ "radiation",     "rsucs",         "rsucs",         "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Downwelling Clear-Sky Longwave Radiation, W m-2 (longitude,latitude,alevhalf,time)
+#"UNKNOWN",       "rldcs",         "rldcs",         "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Downwelling Clear-Sky Shortwave Radiation, W m-2 (longitude,latitude,alevhalf,time)
+ "radiation",     "rsdcs",         "rsdcs",         "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Air Temperature, K (longitude,latitude,alevel,time)
+ "atmos",         "ta",            "ta",            "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Tendency of Air Temperature, K s-1 (longitude,latitude,alevel,time)
+ "atmos",         "tnt",           "tnt",           "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Tendency of Air Temperature due to Advection, K s-1 (longitude,latitude,alevel,time)
+ "atmos",         "tnta",          "tnta",          "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Tendency of Air Temperature due to Model Physics, K s-1 (longitude,latitude,alevel,time)
+ "phys",          "tntmp",         "tntmp",         "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Tendency of Air Temperature Due to Stratiform Cloud and Precipitation and Boundary Layer Mixing, K s-1 (longitude,latitude,alevel,time)
+# REFINE_DIAG: tntscp + tntpbl
+#"UNKNOWN",       "tntscpbl",      "tntscpbl",      "atmos_month_cmip",        "all",  .true.,  "none", 2
+# "moist",         "tntscp",        "tntscp",        "atmos_month_cmip",        "all",  .true.,  "none", 2
+# "vert_diff",     "tntpbl",        "tntpbl",        "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Tendency of Air Temperature due to Radiative Heating, K s-1 (longitude,latitude,alevel,time)
+ "radiation",     "tntr",          "tntr",          "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Tendency of Air Temperature due to Convection, K s-1 (longitude,latitude,alevel,time)
+ "moist",         "tntc",          "tntc",          "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Relative Humidity, % (longitude,latitude,alevel,time)
+ "moist",         "hur",           "hur",           "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Specific Humidity, 1.0 (longitude,latitude,alevel,time)
+ "atmos",         "hus",           "hus",           "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Tendency of Specific Humidity, s-1 (longitude,latitude,alevel,time)
+ "atmos",         "tnhus",         "tnhus",         "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Tendency of Specific Humidity due to Advection, s-1 (longitude,latitude,alevel,time)
+ "atmos",         "tnhusa",        "tnhusa",        "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Tendency of Specific Humidity due to Convection, s-1 (longitude,latitude,alevel,time)
+ "moist",         "tnhusc",        "tnhusc",        "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Tendency of Specific Humidity due to Numerical Diffusion, s-1 (longitude,latitude,alevel,time)
+#"UNKNOWN",       "tnhusd",        "tnhusd",        "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Tendency of Specific Humidity Due to Stratiform Cloud and Precipitation and Boundary Layer Mixing, s-1 (longitude,latitude,alevel,time)
+# REFINE_DIAG: tnhusscp + tnhuspbl
+#"UNKNOWN",       "tnhusscpbl",    "tnhusscpbl",    "atmos_month_cmip",        "all",  .true.,  "none", 2
+# "moist",         "tnhusscp",      "tnhusscp",      "atmos_month_cmip",        "all",  .true.,  "none", 2
+# "vert_diff",     "tnhuspbl",      "tnhuspbl",      "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Tendency of Specific Humidity due to Model Physics, s-1 (longitude,latitude,alevel,time)
+ "phys",          "tnhusmp",       "tnhusmp",       "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Eddy Viscosity Coefficient for Momentum Variables, m2 s-1 (longitude,latitude,alevel,time)
+ "vert_turb",     "evu",           "evu",           "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Eddy Diffusivity Coefficient for Temperature Variable, m2 s-1 (longitude,latitude,alevel,time)
+ "vert_turb",     "edt",           "edt",           "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Convective Cloud Area Fraction, % (longitude,latitude,alevel,time): Priority 2
+#"UNKNOWN",       "clc",           "clc",           "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Mass Fraction of Convective Cloud Liquid Water, 1.0 (longitude,latitude,alevel,time): Priority 2
+#"UNKNOWN",       "clwc",          "clwc",          "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Mass Fraction of Convective Cloud Ice, 1.0 (longitude,latitude,alevel,time): Priority 2
+#"UNKNOWN",       "clic",          "clic",          "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Percentage Cover of Stratiform Cloud, % (longitude,latitude,alevel,time): Priority 2
+#"atmos",         "cls",           "cls",           "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Mass Fraction of Stratiform Cloud Liquid Water, 1.0 (longitude,latitude,alevel,time): Priority 2
+#"atmos",         "clws",          "clws",          "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Mass Fraction of Stratiform Cloud Ice, 1.0 (longitude,latitude,alevel,time): Priority 2
+#"atmos",         "clis",          "clis",          "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Convective Updraft Mass Flux, kg m-2 s-1 (longitude,latitude,alevhalf,time): Priority 2
+#"UNKNOWN",       "mcu",           "mcu",           "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Downdraft Convective Mass Flux, kg m-2 s-1 (longitude,latitude,alevhalf,time): Priority 2
+#"UNKNOWN",       "mcd",           "mcd",           "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Shallow Convective Mass Flux, kg m-2 s-1 (longitude,latitude,alevhalf,time): Priority 2
+#"UNKNOWN",       "smc",           "smc",           "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Deep Convective Mass Flux, kg m-2 s-1 (longitude,latitude,alevhalf,time): Priority 2
+#"UNKNOWN",       "dmc",           "dmc",           "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. TOA Outgoing Shortwave Radiation in 4XCO2 Atmosphere, W m-2 (longitude,latitude,time)
+#"UNKNOWN",       "rsut4co2",      "rsut4co2",      "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. TOA Outgoing Longwave Radiation 4XCO2 Atmosphere, W m-2 (longitude,latitude,time)
+#"UNKNOWN",       "rlut4co2",      "rlut4co2",      "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. TOA Outgoing Clear-Sky Shortwave Radiation 4XCO2 Atmosphere, W m-2 (longitude,latitude,time)
+#"UNKNOWN",       "rsutcs4co2",    "rsutcs4co2",    "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. TOA Outgoing Clear-Sky Longwave Radiation 4XCO2 Atmosphere, W m-2 (longitude,latitude,time)
+#"UNKNOWN",       "rlutcs4co2",    "rlutcs4co2",    "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Upwelling Longwave Radiation 4XCO2 Atmosphere, W m-2 (longitude,latitude,alevhalf,time)
+#"UNKNOWN",       "rlu4co2",       "rlu4co2",       "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Upwelling Shortwave Radiation 4XCO2 Atmosphere, W m-2 (longitude,latitude,alevhalf,time)
+#"UNKNOWN",       "rsu4co2",       "rsu4co2",       "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Downwelling Longwave Radiation 4XCO2 Atmosphere, W m-2 (longitude,latitude,alevhalf,time)
+#"UNKNOWN",       "rld4co2",       "rld4co2",       "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Downwelling Shortwave Radiation 4XCO2 Atmosphere, W m-2 (longitude,latitude,alevhalf,time)
+#"UNKNOWN",       "rsd4co2",       "rsd4co2",       "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Upwelling Clear-Sky Longwave Radiation 4XCO2 Atmosphere, W m-2 (longitude,latitude,alevhalf,time)
+#"UNKNOWN",       "rlucs4co2",     "rlucs4co2",     "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Upwelling Clear-Sky Shortwave Radiation 4XCO2 Atmosphere, W m-2 (longitude,latitude,alevhalf,time)
+#"UNKNOWN",       "rsucs4co2",     "rsucs4co2",     "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Downwelling Clear-Sky Longwave Radiation 4XCO2 Atmosphere, W m-2 (longitude,latitude,alevhalf,time)
+#"UNKNOWN",       "rldcs4co2",     "rldcs4co2",     "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. Downwelling Clear-Sky Shortwave Radiation 4XCO2 Atmosphere, W m-2 (longitude,latitude,alevhalf,time)
+#"UNKNOWN",       "rsdcs4co2",     "rsdcs4co2",     "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. ISCCP Total Cloud Cover Percentage, % (longitude,latitude,time)
+ "cosp",       "tclisccp",               "cltisccp", "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. ISCCP Mean Cloud Albedo, 1.0 (longitude,latitude,time)
+ "cosp",          "albisccp",      "albisccp",      "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. ISCCP Mean Cloud Top Pressure, Pa (longitude,latitude,time)
+ "cosp",          "ctpisccp",      "pctisccp", "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+
+##. ISCCP Cloud Area Fraction, % (longitude,latitude,plev7c,tau,time)
+# "UNKNOWN",       "clisccp",       "clisccp",       "atmos_month_cmip",        "all",  .true.,  "none", 2
+ "cosp", "clisccp_1_1", "clisccp_1_1", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_2_1", "clisccp_2_1", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_3_1", "clisccp_3_1", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_4_1", "clisccp_4_1", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_5_1", "clisccp_5_1", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_6_1", "clisccp_6_1", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_7_1", "clisccp_7_1", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_1_2", "clisccp_1_2", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_2_2", "clisccp_2_2", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_3_2", "clisccp_3_2", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_4_2", "clisccp_4_2", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_5_2", "clisccp_5_2", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_6_2", "clisccp_6_2", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_7_2", "clisccp_7_2", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_1_3", "clisccp_1_3", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_2_3", "clisccp_2_3", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_3_3", "clisccp_3_3", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_4_3", "clisccp_4_3", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_5_3", "clisccp_5_3", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_6_3", "clisccp_6_3", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_7_3", "clisccp_7_3", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_1_4", "clisccp_1_4", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_2_4", "clisccp_2_4", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_3_4", "clisccp_3_4", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_4_4", "clisccp_4_4", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_5_4", "clisccp_5_4", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_6_4", "clisccp_6_4", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_7_4", "clisccp_7_4", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_1_5", "clisccp_1_5", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_2_5", "clisccp_2_5", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_3_5", "clisccp_3_5", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_4_5", "clisccp_4_5", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_5_5", "clisccp_5_5", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_6_5", "clisccp_6_5", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_7_5", "clisccp_7_5", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_1_6", "clisccp_1_6", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_2_6", "clisccp_2_6", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_3_6", "clisccp_3_6", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_4_6", "clisccp_4_6", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_5_6", "clisccp_5_6", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_6_6", "clisccp_6_6", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_7_6", "clisccp_7_6", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_1_7", "clisccp_1_7", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_2_7", "clisccp_2_7", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_3_7", "clisccp_3_7", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_4_7", "clisccp_4_7", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_5_7", "clisccp_5_7", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_6_7", "clisccp_6_7", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clisccp_7_7", "clisccp_7_7", "atmos_month_cmip", "all", .true., "none", 2
+
+
+##. CALIPSO Total Cloud Cover Percentage, % (longitude,latitude,time)
+ "cosp",          "cltcalipso",    "cltcalipso",    "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. CALIPSO Low Level Cloud Cover Percentage, % (longitude,latitude,time,p840)
+ "cosp",          "cllcalipso",    "cllcalipso",    "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. CALIPSO Mid Level Cloud Percentage, % (longitude,latitude,time,p560)
+ "cosp",          "clmcalipso",    "clmcalipso",    "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. CALIPSO High Level Cloud Area Percentage, % (longitude,latitude,time,p220)
+ "cosp",          "clhcalipso",    "clhcalipso",    "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+##. CALIPSO Percentage Cloud Cover, % (longitude,latitude,alt40,time)
+ "cosp",          "clcalipso",     "clcalipso",     "atmos_month_cmip",        "all",  .true.,  "none", 2
+

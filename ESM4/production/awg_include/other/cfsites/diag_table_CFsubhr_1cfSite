@@ -1,0 +1,386 @@
+################
+# Table: CFsubhr
+# Version: 1.00.22
+################
+
+"CFsite_001",      30, "minutes",     1,  "days",   "time"
+
+# add needed auxillary CMIP fields
+ "cmip",          "lev_bnds",      "lev_bnds",      "CFsite_001",        "all",  .false., "none", 1
+ "cmip",          "ap",            "ap",            "CFsite_001",        "all",  .false., "none", 1
+ "cmip",          "b",             "b",             "CFsite_001",        "all",  .false., "none", 1
+ "cmip",          "ap_bnds",       "ap_bnds",       "CFsite_001",        "all",  .false., "none", 1
+ "cmip",          "b_bnds",        "b_bnds",        "CFsite_001",        "all",  .false., "none", 1
+
+## latitude, degrees_north (site)
+## CFsubhr. CMIP5 (P-1)
+ "dynamics",      "grid_latt",              "latitude",      "CFsite_001",        "all", .false.,  "none", 2
+
+## Longitude, degrees_east (site)
+## CFsubhr. CMIP5 (P-1)
+ "dynamics",      "grid_lont",              "longitude",     "CFsite_001",        "all", .false.,  "none", 2
+
+## Air Pressure at Convective Cloud Base, Pa (site)
+## CFsubhr. CMIP5 (P-1)
+ "moist",         "ccb",                    "ccb",           "CFsite_001",     "all", .false.,  "none", 2
+
+## Air Pressure at Convective Cloud Top, Pa (site)
+## CFsubhr. CMIP5 (P-1)
+ "moist",         "cct",                    "cct",           "CFsite_001",     "all", .false.,  "none", 2
+
+## Fraction of Time Convection Occurs in Cell, 1 (site)
+## CFsubhr. CMIP5 (P-1)
+ "moist",         "ci",                     "ci",            "CFsite_001",     "all", .false.,  "none", 2
+
+## Percentage Cloud Cover, % (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+ "moist",         "cl",                     "cl",            "CFsite_001",     "all", .false.,  "none", 2
+
+## Mass Fraction of Cloud Ice, kg kg-1 (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+ "moist",         "cli",                    "cli",           "CFsite_001",     "all", .false.,  "none", 2
+
+## Ice Water Path, kg m-2 (site)
+## CFsubhr. CMIP5 (P-1)
+ "moist",         "clivi",                  "clivi",         "CFsite_001",     "all", .false.,  "none", 2
+
+## Total Cloud Cover Percentage, % (site)
+## CFsubhr. CMIP5 (P-1)
+ "moist",         "clt",                    "clt",           "CFsite_001",     "all", .false.,  "none", 2
+
+## Mass Fraction of Cloud Liquid Water, kg kg-1 (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+ "moist",         "clw",                    "clw",           "CFsite_001",     "all", .false.,  "none", 2
+
+## Condensed Water Path, kg m-2 (site)
+## CFsubhr. CMIP5 (P-1)
+ "moist",         "clwvi",                  "clwvi",         "CFsite_001",     "all", .false.,  "none", 2
+
+## Eddy Diffusivity Coefficient for Temperature Variable, m2 s-1 (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+ "vert_turb",     "edt",                    "edt",           "CFsite_001",     "all", .false.,  "none", 2
+
+## Evaporation, kg m-2 s-1 (site)
+## CFsubhr. CMIP5 (P-1)
+ "flux",          "evspsbl",                "evspsbl",       "CFsite_001",     "all", .false.,  "none", 2
+
+## Eddy Viscosity Coefficient for Momentum Variables, m2 s-1 (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+ "vert_turb",     "evu",                    "evu",           "CFsite_001",     "all", .false.,  "none", 2
+
+## Carbon Mass Flux into Atmosphere Due to All Anthropogenic Emissions of CO2, kg m-2 s-1 (site)
+## CFsubhr. CMIP5 (P-1)
+#"UNKNOWN",       "fco2antt",               "fco2antt",      "CFsite_001",     "all", .false.,  "none", 2
+
+## Carbon Mass Flux into Atmosphere Due to Fossil Fuel Emissions of CO2, kg m-2 s-1 (site)
+## CFsubhr. CMIP5 (P-1)
+#"UNKNOWN",       "fco2fos",                "fco2fos",       "CFsite_001",     "all", .false.,  "none", 2
+
+## Surface Carbon Mass Flux into the Atmosphere Due to Natural Sources, kg m-2 s-1 (site)
+## CFsubhr. CMIP5 (P-1)
+#"UNKNOWN",       "fco2nat",                "fco2nat",       "CFsite_001",     "all", .false.,  "none", 2
+
+## Surface Upward Latent Heat Flux, W m-2 (site)
+## CFsubhr. CMIP5 (P-1)
+ "flux",          "hfls",                   "hfls",          "CFsite_001",     "all", .false.,  "none", 2
+
+## Surface Upward Sensible Heat Flux, W m-2 (site)
+## CFsubhr. CMIP5 (P-1)
+ "flux",          "hfss",                   "hfss",          "CFsite_001",     "all", .false.,  "none", 2
+
+## Relative Humidity, % (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+ "moist",         "hur",                    "hur",           "CFsite_001",     "all", .false.,  "none", 2
+
+## Near-Surface Relative Humidity, % (site)
+## CFsubhr. CMIP5 (P-1)
+ "flux",          "hurs",                   "hurs",          "CFsite_001",     "all", .false.,  "none", 2
+
+## Specific Humidity, 1 (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+ "atmos",         "hus",                    "hus",           "CFsite_001",     "all", .false.,  "none", 2
+
+## Near-Surface Specific Humidity, 1 (site)
+## CFsubhr. CMIP5 (P-1)
+ "flux",          "huss",                   "huss",          "CFsite_001",     "all", .false.,  "none", 2
+
+## Convective Mass Flux, kg m-2 s-1 (alevhalf,site)
+## CFsubhr. CMIP5 (P-1)
+ "moist",         "mc",                     "mc",            "CFsite_001",     "all", .false.,  "none", 2
+
+## Pressure on Model Levels, Pa (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+#"UNKNOWN",       "pfull",                  "pfull",         "CFsite_001",     "all", .false.,  "none", 2
+
+## Pressure on Model Half-Levels, Pa (alevhalf,site)
+## CFsubhr. CMIP5 (P-1)
+#"UNKNOWN",       "phalf",                  "phalf",         "CFsite_001",     "all", .false.,  "none", 2
+
+## Precipitation, kg m-2 s-1 (site)
+## CFsubhr. CMIP5 (P-1)
+ "moist",         "pr",                     "pr",            "CFsite_001",     "all", .false.,  "none", 2
+
+## Convective Precipitation, kg m-2 s-1 (site)
+## CFsubhr. CMIP5 (P-1)
+ "moist",         "prc",                    "prc",           "CFsite_001",     "all", .false.,  "none", 2
+
+## Snowfall Flux, kg m-2 s-1 (site)
+## CFsubhr. CMIP5 (P-1)
+ "moist",         "prsn",                   "prsn",          "CFsite_001",     "all", .false.,  "none", 2
+
+## Water Vapor Path, kg m-2 (site)
+## CFsubhr. CMIP5 (P-1)
+ "moist",         "prw",                    "prw",           "CFsite_001",     "all", .false.,  "none", 2
+
+## Surface Air Pressure, Pa (site)
+## CFsubhr. CMIP5 (P-1)
+ "atmos",         "ps",                     "ps",            "CFsite_001",     "all", .false.,  "none", 2
+
+## Sea Level Pressure, Pa (site)
+## CFsubhr. CMIP5 (P-1)
+ "flux",          "psl",                    "psl",           "CFsite_001",     "all", .false.,  "none", 2
+
+## Downwelling Longwave Radiation, W m-2 (alevhalf,site)
+## CFsubhr. CMIP5 (P-1)
+#"UNKNOWN",       "rld",                    "rld",           "CFsite_001",     "all", .false.,  "none", 2
+
+## Downwelling Clear-Sky Longwave Radiation, W m-2 (alevhalf,site)
+## CFsubhr. CMIP5 (P-1)
+#"UNKNOWN",       "rldcs",                  "rldcs",         "CFsite_001",     "all", .false.,  "none", 2
+
+## Surface Downwelling Longwave Radiation, W m-2 (site)
+## CFsubhr. CMIP5 (P-1)
+ "radiation",     "rlds",                   "rlds",          "CFsite_001",     "all", .false.,  "none", 2
+
+## Surface Downwelling Clear-Sky Longwave Radiation, W m-2 (site)
+## CFsubhr. CMIP5 (P-1)
+ "radiation",     "rldscs",                 "rldscs",        "CFsite_001",     "all", .false.,  "none", 2
+
+## Upwelling Longwave Radiation, W m-2 (alevhalf,site)
+## CFsubhr. CMIP5 (P-1)
+#"UNKNOWN",       "rlu",                    "rlu",           "CFsite_001",     "all", .false.,  "none", 2
+
+## Upwelling Clear-Sky Longwave Radiation, W m-2 (alevhalf,site)
+## CFsubhr. CMIP5 (P-1)
+#"UNKNOWN",       "rlucs",                  "rlucs",         "CFsite_001",     "all", .false.,  "none", 2
+
+## Surface Upwelling Longwave Radiation, W m-2 (site)
+## CFsubhr. CMIP5 (P-1)
+ "radiation",     "rlus",                   "rlus",          "CFsite_001",     "all", .false.,  "none", 2
+
+## TOA Outgoing Longwave Radiation, W m-2 (site)
+## CFsubhr. CMIP5 (P-1)
+ "radiation",     "rlut",                   "rlut",          "CFsite_001",     "all", .false.,  "none", 2
+
+## TOA Outgoing Clear-sky Longwave Radiation, W m-2 (site)
+## CFsubhr. CMIP5 (P-1)
+ "radiation",     "rlutcs",                 "rlutcs",        "CFsite_001",     "all", .false.,  "none", 2
+
+## Downwelling Shortwave Radiation, W m-2 (alevhalf,site)
+## CFsubhr. CMIP5 (P-1)
+ "radiation",     "rsd",                    "rsd",           "CFsite_001",     "all", .false.,  "none", 2
+
+## Downwelling Clear-Sky Shortwave Radiation, W m-2 (alevhalf,site)
+## CFsubhr. CMIP5 (P-1)
+ "radiation",     "rsdcs",                  "rsdcs",         "CFsite_001",     "all", .false.,  "none", 2
+
+## Surface Downwelling Shortwave Radiation, W m-2 (site)
+## CFsubhr. CMIP5 (P-1)
+ "radiation",     "rsds",                   "rsds",          "CFsite_001",     "all", .false.,  "none", 2
+
+## Surface Downwelling Clear-Sky Shortwave Radiation, W m-2 (site)
+## CFsubhr. CMIP5 (P-1)
+ "radiation",     "rsdscs",                 "rsdscs",        "CFsite_001",     "all", .false.,  "none", 2
+
+## TOA Incident Shortwave Radiation, W m-2 (site)
+## CFsubhr. CMIP5 (P-1)
+ "radiation",     "rsdt",                   "rsdt",          "CFsite_001",     "all", .false.,  "none", 2
+
+## Upwelling Shortwave Radiation, W m-2 (alevhalf,site)
+## CFsubhr. CMIP5 (P-1)
+ "radiation",     "rsu",                    "rsu",           "CFsite_001",     "all", .false.,  "none", 2
+
+## Upwelling Clear-Sky Shortwave Radiation, W m-2 (alevhalf,site)
+## CFsubhr. CMIP5 (P-1)
+ "radiation",     "rsucs",                  "rsucs",         "CFsite_001",     "all", .false.,  "none", 2
+
+## Surface Upwelling Shortwave Radiation, W m-2 (site)
+## CFsubhr. CMIP5 (P-1)
+ "radiation",     "rsus",                   "rsus",          "CFsite_001",     "all", .false.,  "none", 2
+
+## Surface Upwelling Clear-Sky Shortwave Radiation, W m-2 (site)
+## CFsubhr. CMIP5 (P-1)
+ "radiation",     "rsuscs",                 "rsuscs",        "CFsite_001",     "all", .false.,  "none", 2
+
+## Top-of-Atmosphere Outgoing Shortwave Radiation, W m-2 (site)
+## CFsubhr. CMIP5 (P-1)
+ "radiation",     "rsut",                   "rsut",          "CFsite_001",     "all", .false.,  "none", 2
+
+## TOA Outgoing Clear-Sky Shortwave Radiation, W m-2 (site)
+## CFsubhr. CMIP5 (P-1)
+ "radiation",     "rsutcs",                 "rsutcs",        "CFsite_001",     "all", .false.,  "none", 2
+
+## Net Downward Radiative Flux at Top of Model, W m-2 (site)
+## CFsubhr. CMIP5 (P-1)
+ "radiation",     "rtmt",                   "rtmt",          "CFsite_001",     "all", .false.,  "none", 2
+
+## Fraction of Time Shallow Convection Occurs, 1 (site)
+## CFsubhr. CMIP5 (P-1)
+ "uw_conv",       "sci",                    "sci",           "CFsite_001",     "all", .false.,  "none", 2
+
+## Near-Surface Wind Speed, m s-1 (site)
+## CFsubhr. CMIP5 (P-1)
+ "flux",          "sfcWind",                "sfcWind",       "CFsite_001",     "all", .false.,  "none", 2
+
+## Air Temperature, K (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+ "atmos",         "ta",                     "ta",            "CFsite_001",     "all", .false.,  "none", 2
+
+## Near-Surface Air Temperature, K (site)
+## CFsubhr. CMIP5 (P-1)
+ "flux",          "tas",                    "tas",           "CFsite_001",     "all", .false.,  "none", 2
+
+## Surface Downward Eastward Wind Stress, Pa (site)
+## CFsubhr. CMIP5 (P-1)
+ "flux",          "tauu",                   "tauu",          "CFsite_001",     "all", .false.,  "none", 2
+
+## Surface Downward Northward Wind Stress, Pa (site)
+## CFsubhr. CMIP5 (P-1)
+ "flux",          "tauv",                   "tauv",          "CFsite_001",     "all", .false.,  "none", 2
+
+## Tendency of Specific Humidity, s-1 (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+ "atmos",         "tnhus",                  "tnhus",         "CFsite_001",     "all", .false.,  "none", 2
+
+## Tendency of Specific Humidity due to Advection, s-1 (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+ "atmos",         "tnhusa",                 "tnhusa",        "CFsite_001",     "all", .false.,  "none", 2
+
+## Tendency of Specific Humidity due to Convection, s-1 (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+ "moist",         "tnhusc",                 "tnhusc",        "CFsite_001",     "all", .false.,  "none", 2
+
+## Tendency of Specific Humidity due to Numerical Diffusion, s-1 (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+#"UNKNOWN",       "tnhusd",                 "tnhusd",        "CFsite_001",     "all", .false.,  "none", 2
+
+## Tendency of Specific Humidity due to Model Physics, s-1 (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+ "phys",          "tnhusmp",                "tnhusmp",       "CFsite_001",     "all", .false.,  "none", 2
+
+## Tendency of Specific Humidity Due to Stratiform Cloud and Precipitation and Boundary Layer Mixing, s-1 (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+#"UNKNOWN",       "tnhusscpbl",             "tnhusscpbl",    "CFsite_001",     "all", .false.,  "none", 2
+
+## Tendency of Air Temperature, K s-1 (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+ "atmos",         "tnt",                    "tnt",           "CFsite_001",     "all", .false.,  "none", 2
+
+## Tendency of Air Temperature due to Advection, K s-1 (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+ "atmos",         "tnta",                   "tnta",          "CFsite_001",     "all", .false.,  "none", 2
+
+## Tendency of Air Temperature due to Convection, K s-1 (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+ "moist",         "tntc",                   "tntc",          "CFsite_001",     "all", .false.,  "none", 2
+
+## Tendency of Air Temperature due to Model Physics, K s-1 (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+ "phys",          "tntmp",                  "tntmp",         "CFsite_001",     "all", .false.,  "none", 2
+
+## Tendency of Air Temperature due to Radiative Heating, K s-1 (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+ "radiation",     "tntr",                   "tntr",          "CFsite_001",     "all", .false.,  "none", 2
+
+## Tendency of Air Temperature Due to Stratiform Cloud and Precipitation and Boundary Layer Mixing, K s-1 (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+#"UNKNOWN",       "tntscpbl",               "tntscpbl",      "CFsite_001",     "all", .false.,  "none", 2
+
+## Surface Temperature, K (site)
+## CFsubhr. CMIP5 (P-1)
+ "flux",          "ts",                     "ts",            "CFsite_001",     "all", .false.,  "none", 2
+
+## Eastward Wind, m s-1 (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+ "atmos",         "ua",                     "ua",            "CFsite_001",     "all", .false.,  "none", 2
+
+## Eastward Near-Surface Wind, m s-1 (site)
+## CFsubhr. CMIP5 (P-1)
+ "flux",          "uas",                    "uas",           "CFsite_001",     "all", .false.,  "none", 2
+
+## Northward Wind, m s-1 (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+ "atmos",         "va",                     "va",            "CFsite_001",     "all", .false.,  "none", 2
+
+## Northward Near-Surface Wind, m s-1 (site)
+## CFsubhr. CMIP5 (P-1)
+ "flux",          "vas",                    "vas",           "CFsite_001",     "all", .false.,  "none", 2
+
+## omega (=dp/dt), Pa s-1 (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+ "atmos",         "wap",                    "wap",           "CFsite_001",     "all", .false.,  "none", 2
+
+## Geopotential Height, m (alevel,site)
+## CFsubhr. CMIP5 (P-1)
+ "atmos",         "zg",                     "zg",            "CFsite_001",     "all", .false.,  "none", 2
+
+## Surface Snow and Ice Sublimation Flux, kg m-2 s-1 (site)
+## CFsubhr. CMIP5 (P-1)
+#"UNKNOWN",       "sbl",                    "sbl",           "CFsite_001",      "all", .false.,  "none", 2
+
+###############
+# Table: Esubhr
+# Version: 1.00.22
+###############
+
+## tendency_of_air_temperature_due_to_longwave_heating, K s-1 (alevel,site): Priority 3
+## Esubhr. CFMIP (P-3)
+ "radiation",     "tntrl",                  "tntrl",         "CFsite_001",   "all", .false.,  "none", 2
+
+## tendency_of_air_temperature_due_to_shortwave_heating, K s-1 (alevel,site): Priority 3
+## Esubhr. CFMIP (P-3)
+ "radiation",     "tntrs",                  "tntrs",         "CFsite_001",   "all", .false.,  "none", 2
+
+## Hydrometeor Effective Radius of Convective Cloud Ice, m (alevel,site): Priority 2
+## Esubhr. CFMIP (P-2)
+#"UNKNOWN",       "reffclic",               "reffclic",      "CFsite_001",     "all", .false.,  "none", 2
+
+## Hydrometeor Effective Radius of Stratiform Cloud Ice, m (alevel,site): Priority 2
+## Esubhr. CFMIP (P-2)
+#"UNKNOWN",       "reffclis",               "reffclis",      "CFsite_001",     "all", .false.,  "none", 2
+
+## Convective Cloud Droplet Effective Radius, m (alevel,site): Priority 2
+## Esubhr. CFMIP (P-2)
+#"UNKNOWN",       "reffclwc",               "reffclwc",      "CFsite_001",     "all", .false.,  "none", 2
+
+## Stratiform Cloud Droplet Effective Radius, m (alevel,site): Priority 2
+## Esubhr. CFMIP (P-2)
+#"UNKNOWN",       "reffclws",               "reffclws",      "CFsite_001",     "all", .false.,  "none", 2
+
+## Tendency of Specific Humidity Due to Boundary Layer Mixing, s-1 (alevel,site)
+## Esubhr. CFMIP (P-1)
+ "vert_diff",     "tnhuspbl",               "tnhuspbl",      "CFsite_001",     "all", .false.,  "none", 2
+
+## Tendency of Specific Humidity Due to Stratiform Clouds and Precipitation, s-1 (alevel,site)
+## Esubhr. CFMIP (P-1)
+ "moist",         "tnhusscp",               "tnhusscp",      "CFsite_001",     "all", .false.,  "none", 2
+
+## Tendency of Air Temperature due to Numerical Diffusion, K s-1 (alevel,site)
+## Esubhr. CFMIP (P-1)
+#"UNKNOWN",       "tntd",                   "tntd",          "CFsite_001",     "all", .false.,  "none", 2
+
+## Tendency of Air Temperature Due to Boundary Layer Mixing, K s-1 (alevel,site)
+## Esubhr. CFMIP (P-1)
+ "vert_diff",     "tntpbl",                 "tntpbl",        "CFsite_001",     "all", .false.,  "none", 2
+
+## Tendency of Air Temperature due to Clear Sky Longwave Radiative Heating, K s-1 (alevel,site)
+## Esubhr. CFMIP (P-1)
+ "radiation",     "tntrlcs",                "tntrlcs",       "CFsite_001",     "all", .false.,  "none", 2
+
+## Tendency of Air Temperature due to Clear Sky Shortwave Radiative Heating, K s-1 (alevel,site)
+## Esubhr. CFMIP (P-1)
+ "radiation",     "tntrscs",                "tntrscs",       "CFsite_001",     "all", .false.,  "none", 2
+
+## Tendency of Air Temperature Due to Stratiform Clouds and Precipitation, K s-1 (alevel,site)
+## Esubhr. CFMIP (P-1)
+ "moist",         "tntscp",                 "tntscp",        "CFsite_001",     "all", .false.,  "none", 2

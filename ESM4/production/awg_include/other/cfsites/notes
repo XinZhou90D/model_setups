@@ -1,0 +1,18 @@
+Notes on generating CFsite diag tables
+1. drq -m $mips -e amip --diagtable
+2. combine the CFsubhr and Esubhr tables
+3. modify that:
+   sed -i 's/[a-z]*_subhourly_sites/CFsite_001/g' diag_table_CFsubhr_1cfSite
+   sed -i 's/atmos_static_sites/CFsite_001/g' diag_table_CFsubhr_1cfSite
+   Clean up duplicate diag-files
+   change CFsite_001 diagfile to 30 minutes
+   clean up comments and formatting
+   add in data request version tag
+4. add in CMIP auxillary variables
+ "cmip",          "lev_bnds",      "lev_bnds",      "CFsite_001",        "all",  .false., "none", 1
+ "cmip",          "ap",            "ap",            "CFsite_001",        "all",  .false., "none", 1
+ "cmip",          "b",             "b",             "CFsite_001",        "all",  .false., "none", 1
+ "cmip",          "ap_bnds",       "ap_bnds",       "CFsite_001",        "all",  .false., "none", 1
+ "cmip",          "b_bnds",        "b_bnds",        "CFsite_001",        "all",  .false., "none", 1
+5. Run expander script
+   ./go > ../../diag_table/cmip6/diag_table_CFsite

@@ -1,0 +1,960 @@
+5,6c5,6
+< #PBS -N c96L33_am4p0_aqua_prectl_j_1x0m8d_216x1a
+< #PBS -l walltime=9000
+---
+> #PBS -N c96L33_am4p0_aqua_prectl_j_1x0m0d1h_216x1a
+> #PBS -l walltime=3000
+20,21c20,21
+< # The script created at 2018-06-04T17:40:08 via:
+< # /ncrc/home2/fms/local/opt/fre-commands/bronx-12/bin/frerun --archive --combine-history --ncores --partition=c3 --platform=ncrc3.intel --queue=batch --regression=basic --submit --target=openmp --transfer --walltime=240 --xmlfile=/ncrc/home2/Levi.Silvers/awg/cmip6/xml_amip/xml/aquaplanet.xml c96L33_am4p0_aqua_prectl_j
+---
+> # The script created at 2018-06-14T17:52:23 via:
+> # /ncrc/home2/fms/local/opt/fre-commands/bronx-12/bin/frerun --archive --combine-history --ncores --overwrite --partition=c3 --platform=ncrc3.intel --queue=batch --regression=hour --target=openmp --transfer --walltime=240 --xmlfile=/ncrc/home2/Levi.Silvers/awg/cmip6/xml_amip/xml/aquaplanet.xml c96L33_am4p0_aqua_prectl_j
+70c70
+< set -r stateDir = /lustre/f1/unswept/Levi.Silvers/doubly_periodic/warsaw_201803/bronx-12/c96L33_am4p0_aqua_prectl_j/ncrc3.intel-prod-openmp/state/1x0m8d_216x1a/run
+---
+> set -r stateDir = /lustre/f1/unswept/Levi.Silvers/doubly_periodic/warsaw_201803/bronx-12/c96L33_am4p0_aqua_prectl_j/ncrc3.intel-prod-openmp/state/1x0m0d1h_216x1a/run
+74c74
+< set -r scriptName = /lustre/f1/unswept/Levi.Silvers/doubly_periodic/warsaw_201803/bronx-12/c96L33_am4p0_aqua_prectl_j/ncrc3.intel-prod-openmp/scripts/run/c96L33_am4p0_aqua_prectl_j_1x0m8d_216x1a
+---
+> set -r scriptName = /lustre/f1/unswept/Levi.Silvers/doubly_periodic/warsaw_201803/bronx-12/c96L33_am4p0_aqua_prectl_j/ncrc3.intel-prod-openmp/scripts/run/c96L33_am4p0_aqua_prectl_j_1x0m0d1h_216x1a
+80,82c80,82
+< set -r dayslist = ( 8 )
+< set -r hourslist = ( 0 )
+< set -r timeStampOptions = ( -f digital )
+---
+> set -r dayslist = ( 0 )
+> set -r hourslist = ( 1 )
+> set -r timeStampOptions = ( -hf digital )
+138c138
+< set -r flagOutputTypeInitial
+---
+> set -r flagOutputTypeOverwrite
+153c153
+< set outputDir = /lustre/f1/Levi.Silvers/doubly_periodic/warsaw_201803/bronx-12/c96L33_am4p0_aqua_prectl_j/ncrc3.intel-prod-openmp/1x0m8d_216x1a
+---
+> set outputDir = /lustre/f1/Levi.Silvers/doubly_periodic/warsaw_201803/bronx-12/c96L33_am4p0_aqua_prectl_j/ncrc3.intel-prod-openmp/1x0m0d1h_216x1a
+175c175
+<   set -r lnd_layout = 3,12
+---
+>   set -r lnd_layout = 18,12
+807c807,1170
+<       # Simplified diag_table for running AWG AMIP experiments
+---
+>       ####################
+> # Table: AERmon
+> # Version: 1.00.15
+> ####################
+>  "aerosol_month_cmip",       1, "months",    1,  "days",  "time",
+> ####################
+> ##. Auxiliary fields required for model level output
+>  "cmip",          "ap",            "ap",            "aerosol_month_cmip",      "all",  .false., "none", 1
+>  "cmip",          "b",             "b",             "aerosol_month_cmip",      "all",  .false., "none", 1
+>  "cmip",          "ap_bnds",       "ap_bnds",       "aerosol_month_cmip",      "all",  .false., "none", 1
+>  "cmip",          "b_bnds",        "b_bnds",        "aerosol_month_cmip",      "all",  .false., "none", 1
+>  "cmip",          "lev_bnds",      "lev_bnds",      "aerosol_month_cmip",      "all",  .false., "none", 1
+>  "cmip",          "ap_half",       "ap_half",       "aerosol_month_cmip",      "all",  .false., "none", 1
+>  "cmip",          "b_half",        "b_half",        "aerosol_month_cmip",      "all",  .false., "none", 1
+> ##. Ambient Aerosol Absorption Optical Thickness at 550 nm, 1.0 (longitude,latitude,time)
+>  "radiation",     "abs550aer",     "abs550aer",     "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. Vertically integrated mass content of air in layer, kg m-2 (longitude,latitude,alevel,time)
+> # "tracers",       "airmass",       "airmass",       "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. Northern Hemisphere Tracer Lifetime, yr (longitude,latitude,alevel,time)
+> #"UNKNOWN",       "aoanh",         "aoanh",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. Boundary Layer Depth, m (longitude,latitude,time)
+> # "vert_turb",     "bldep",         "bldep",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. C2H2 volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+> # NOT AVAILABLE
+> #"UNKNOWN",       "c2h2",          "c2h2",          "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ###. C2H6 volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+> # "tracers",       "c2h6_mol_mol",  "c2h6",          "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. C3H6  volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+> # "tracers",       "c3h6_mol_mol",  "c3h6",          "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. C3H8  volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+> # "tracers",       "c3h8_mol_mol",  "c3h8",          "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. cloud condensation nuclei concentration at liquid cloud top, m-3 (longitude,latitude,time)
+> #"UNKNOWN",       "ccn",           "ccn",           "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. Cloud Droplet Number Concentration, m-3 (longitude,latitude,alevel,time)
+>  "strat",         "cdnc",          "cdnc",          "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. CH3COCH3  volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+> # "tracers",       "ch3coch3_mol_mol", "ch3coch3",   "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ###. CH4 volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+> # "tracers",       "ch4_mol_mol",   "ch4",           "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Aqueous-phase production rate of SO4, kg m-2 s-1 (longitude,latitude,alevel,time)
+> ## REFINE_DIAG -- pso4_aq_kg_m2_s + pso4_aq_so2_reevap_ls
+> ##"UNKNOWN",       "cheaqpso4",       "cheaqpso4",      "aerosol_month_cmip",   "all",  .true.,  "none", 2
+> # "tracers",       "pso4_aq_kg_m2_s", "pso4_aq_kg_m2_s","aerosol_month_cmip",   "all",  .true.,  "none", 2
+> # "tracers", "pso4_aq_so2_reevap_ls", "pso4_aq_so2_reevap_ls","aerosol_month_cmip","all",.true., "none", 2
+> #
+> ###. Gas-phase production rate of SO4, kg m-2 s-1 (longitude,latitude,alevel,time)
+> # "tracers",       "pso4_gas_kg_m2_s", "chegpso4",   "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. total net production of anthropogenic secondary organic aerosol, kg m-2 s-1 (longitude,latitude,time)
+> # "tracers",       "chepasoa",      "chepasoa",      "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. chemical production of dry aerosol secondary organic matter, kg m-2 s-1 (longitude,latitude,time)
+> # "tracers",       "chepsoa",       "chepsoa",       "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. Convective Cloud Cover Percentage, % (longitude,latitude,time)
+>  "uw_conv",       "cltc_uw",       "cltc",          "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. CO volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+> # "tracers",       "co_mol_mol",    "co",            "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. CO2 volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+> #NOT APPLICABLE - Scalar
+> #"UNKNOWN",       "co2",           "co2",           "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. Cloud Optical Depth, 1.0 (longitude,latitude,time) -- ????
+> #"UNKNOWN",       "cod",           "cod",           "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. DMS volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+>  "tracers",       "dms_mol_mol",   "dms",           "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ###. dry deposition rate of black carbon aerosol mass, kg m-2 s-1 (longitude,latitude,time)
+> # "tracers",       "drybc",         "drybc",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Dry Deposition Rate of Dust, kg m-2 s-1 (longitude,latitude,time)
+> # "tracers",       "drydust",       "drydust",       "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Dry Deposition Rate of nh3, kg m-2 s-1 (longitude,latitude,time)
+> # "tracers",       "nh3_ddep_kg_m2_s", "drynh3",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. dry deposition rate of nh4, kg m-2 s-1 (longitude,latitude,time)
+> # "tracers",       "nh4_ddep_kg_m2_s", "drynh4",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. dry deposition rate of noy, kg m-2 s-1 (longitude,latitude,time)
+> # "tracers",       "fam_noy_ddep_kg_m2_s", "drynoy",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Dry Deposition Rate of o3, kg m-2 s-1 (longitude,latitude,time)
+> # "tracers",       "o3_ddep_kg_m2_s", "dryo3",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. dry deposition rate of dry aerosol total organic matter, kg m-2 s-1 (longitude,latitude,time)
+> # "tracers",       "dryoa",         "dryoa",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Dry Deposition Rate of so2, kg m-2 s-1 (longitude,latitude,time)
+> # "tracers",       "so2_ddep_kg_m2_s", "dryso2",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. dry deposition rate of so4, kg m-2 s-1 (longitude,latitude,time)
+> # "tracers",       "so4_ddep_kg_m2_s", "dryso4",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. dry deposition rate of seasalt, kg m-2 s-1 (longitude,latitude,time)
+> # "tracers",       "dryss",         "dryss",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. total emission rate of anthropogenic co, kg m-2 s-1 (longitude,latitude,time)
+> ##"UNKNOWN",       "emiaco",        "emiaco",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. anthropogenic emission rate of nox, kg m-2 s-1 (longitude,latitude,time)
+> ##"UNKNOWN",       "emianox",       "emianox",       "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. total emission of anthropogenic  organic aerosol, kg m-2 s-1 (longitude,latitude,time)
+> ##"UNKNOWN",       "emiaoa",        "emiaoa",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ## REFINED_DIAG: emiaoa = emiapoa + chepasoa
+> # "tracers",       "emiapoa",       "emiapoa",       "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. emission rate of black carbon aerosol mass, kg m-2 s-1 (longitude,latitude,time)
+> # "tracers",       "emibc",         "emibc",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. total emission rate of biogenic nmvoc, kg m-2 s-1 (longitude,latitude,time)
+> ##"UNKNOWN",       "emibvoc",       "emibvoc",       "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Total Emission Rate of co, kg m-2 s-1 (longitude,latitude,time)
+> # "tracers",       "emico",         "emico",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Total Emission Rate of dms, kg m-2 s-1 (longitude,latitude,time)
+> # "tracers",       "emidms",        "emidms",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. total emission rate of dust, kg m-2 s-1 (longitude,latitude,time)
+> # "tracers",       "emidust",       "emidust",       "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Total Emission Rate of isoprene, kg m-2 s-1 (longitude,latitude,time)
+> # "tracers",       "emiisop",       "emiisop",       "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. layer-integrated lightning production of NOx, mol s-1 (longitude,latitude,alevel,time)
+> ##"UNKNOWN",       "emilnox",       "emilnox",       "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Total Emission Rate of nh3, kg m-2 s-1 (longitude,latitude,time)
+> # "tracers",       "eminh3",        "eminh3",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Total Emission Rate of nox, kg m-2 s-1 (longitude,latitude,time)
+> # "tracers",       "eminox",        "eminox",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. primary emission and chemical production of dry aerosol organic matter, kg m-2 s-1 (longitude,latitude,time)
+> ##"UNKNOWN",       "emioa",         "emioa",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ## REFINED_DIAG: emioa = emipoa + chepsoa
+> # "tracers",       "emipoa",        "emipoa",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Total Emission Rate of so2, kg m-2 s-1 (longitude,latitude,time)
+> #  "tracers",       "emiso2",        "emiso2",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. total direct emission rate of so4, kg m-2 s-1 (longitude,latitude,time)
+> ##"UNKNOWN",       "emiso4",        "emiso4",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. total emission rate of seasalt, kg m-2 s-1 (longitude,latitude,time)
+> # "tracers",       "emiss",         "emiss",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. total emission rate of nmvoc, kg m-2 s-1 (longitude,latitude,time)
+> ##"UNKNOWN",       "emivoc",        "emivoc",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Mass Fraction of Water, 1.0 (longitude,latitude,alevel,time)
+> ##"UNKNOWN",       "h2o",           "h2o",           "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Formaldehyde volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+> # "tracers",       "ch2o_mol_mol",  "hcho",          "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. HCl volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+> # "tracers",       "hcl_mol_mol",   "hcl",           "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. HNO3 volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+> # "tracers",       "hno3_mol_mol",  "hno3",          "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Isoprene volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+> # "tracers",       "isop_mol_mol",  "isop",          "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. photolysis rate of NO2, s-1 (longitude,latitude,alevel,time)
+> ##"UNKNOWN",       "jno2",          "jno2",          "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Monthly Loss of atmospheric Methane, mol m-3 s-1 (longitude,latitude,alevel,time)
+> ##"UNKNOWN",       "lossch4",       "lossch4",       "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Monthly Loss of atmospheric Carbon Monoxide, mol m-3 s-1 (longitude,latitude,alevel,time)
+> ##"UNKNOWN",       "lossco",        "lossco",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Monthly Loss of atmospheric Nitrous Oxide, mol m-3 s-1 (longitude,latitude,alevel,time)
+> ##"UNKNOWN",       "lossn2o",       "lossn2o",       "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. liquid water path, kg m-2 (longitude,latitude,time)
+>  "moist",         "lwp",           "lwp",           "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. Aerosol water mass mixing ratio, kg kg-1 (longitude,latitude,alevel,time)
+> #"UNKNOWN",       "mmraerh2o",     "mmraerh2o",     "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. Elemental carbon mass mixing ratio, kg kg-1 (longitude,latitude,alevel,time)
+>  "tracers",       "fam_bc_kg_kg",  "mmrbc",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. Dust aerosol mass mixing ratio, kg kg-1 (longitude,latitude,alevel,time)
+>  "tracers",       "fam_dust_kg_kg","mmrdust",       "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. NH4 mass mixing ratio, kg kg-1 (longitude,latitude,alevel,time)
+>  "tracers",       "nh4_kg_kg",     "mmrnh4",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. NO3 aerosol mass mixing ratio, kg kg-1 (longitude,latitude,alevel,time)
+>  "tracers",       "nh4no3_kg_kg",  "mmrno3",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. Total organic aerosol mass mixing ratio, kg kg-1 (longitude,latitude,alevel,time)
+>  "tracers",       "fam_om_kg_kg",  "mmroa",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ###. PM1.0 mass mixing ratio, kg kg-1 (longitude,latitude,alevel,time)
+> # "tracers",       "pm1_kg_kg",     "mmrpm1",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ###. PM10 mass mixing ratio, kg kg-1 (longitude,latitude,alevel,time)
+> # "tracers",       "pm10_kg_kg",    "mmrpm10",       "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. PM2.5 mass mixing ratio, kg kg-1 (longitude,latitude,alevel,time)
+> # "tracers",       "pm25_kg_kg",    "mmrpm2p5",      "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. Aerosol sulfate mass mixing ratio, kg kg-1 (longitude,latitude,alevel,time)
+>  "tracers",       "so4_kg_kg",     "mmrso4",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. Secondary organic aerosol mass mixing ratio, kg kg-1 (longitude,latitude,alevel,time)
+>  "tracers",       "SOA_kg_kg",     "mmrsoa",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. Sea Salt mass mixing ratio, kg kg-1 (longitude,latitude,alevel,time)
+>  "tracers",       "fam_seasalt_kg_kg", "mmrss",     "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ###. N2O volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+> # "tracers",       "n2o_mol_mol",   "n2o",           "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Fixed surface layer mixing ratio over 30o-50oN (100ppbv), uniform fixed 50-day exponential decay., mol mol-1 (longitude,latitude,alevel,time)
+> ##"UNKNOWN",       "nh50",          "nh50",          "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. NO volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+> # "tracers",       "no_mol_mol",    "no",            "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. NO2 volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+> # "tracers",       "no2_mol_mol",   "no2",           "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Ozone volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+> # "tracers",       "o3_mol_mol",            "o3",            "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. O3 destruction rate, mol m-3 s-1 (longitude,latitude,alevel,time)
+> ##"UNKNOWN",       "o3loss",        "o3loss",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. O3 production rate, mol m-3 s-1 (longitude,latitude,alevel,time)
+> ##"UNKNOWN",       "o3prod",        "o3prod",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Ozone volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+> ##"UNKNOWN",       "o3ste",         "o3ste",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. ambient aerosol optical thickness at 440 nm, 1.0 (longitude,latitude,time)
+> # "radiation",     "od440aer",      "od440aer",      "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. ambient aerosol optical thickness at 550 nm, 1.0 (longitude,latitude,time)
+>  "radiation",     "od550aer",      "od550aer",      "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ###. aerosol water aod at 550nm, 1.0 (longitude,latitude,time)
+> ##"UNKNOWN",       "od550aerh2o",   "od550aerh2o",   "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Aerosol Optical Depth at 550nm due to Biomass Burning, 1.0 (longitude,latitude,time)
+> ##"UNKNOWN",       "od550bb",       "od550bb",       "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. black carbon aod at 550nm, 1.0 (longitude,latitude,time)
+> # "radiation",     "od550bc",       "od550bc",       "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. ambient aerosol optical thickness at 550 nm, 1.0 (longitude,latitude,time)
+> ##"UNKNOWN",       "od550csaer",    "od550csaer",    "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. dust aod@550nm, 1.0 (longitude,latitude,time)
+> # "radiation",     "od550dust",     "od550dust",     "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. ambient fine aerosol optical thickness at 550 nm, 1.0 (longitude,latitude,time)
+> # "radiation",     "od550lt1aer",   "od550lt1aer",   "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. nitrate aod@550nm, 1.0 (longitude,latitude,time)
+> ##"UNKNOWN",       "od550no3",      "od550no3",      "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. **pom+som** aod@550nm, 1.0 (longitude,latitude,time)
+> # "radiation",     "od550oa",       "od550oa",       "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. sulfate aod@550nm, 1.0 (longitude,latitude,time)
+> # "radiation",     "od550so4",      "od550so4",      "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. soa aod@550nm, 1.0 (longitude,latitude,time)
+> # "radiation",     "od550soa",      "od550soa",      "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. sea salt aod@550nm, 1.0 (longitude,latitude,time)
+> # "radiation",     "od550ss",       "od550ss",       "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. ambient aerosol optical thickness at 870 nm, 1.0 (longitude,latitude,time)
+> # "radiation",     "od870aer",      "od870aer",      "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. OH volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+> # "tracers",       "oh_mol_mol",    "oh",            "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. PAN volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+> # "tracers",       "pan_mol_mol",   "pan",           "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ###. Pressure on Model Levels, Pa (longitude,latitude,alevel,time)
+> # "phys",          "pfull",         "pfull",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Pressure on Model Half-Levels, Pa (longitude,latitude,alevhalf,time)
+> # "phys",          "phalf",         "phalf",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. Photolysis Rate of Ozone (O3) to Excited Atomic Oxygen (singlet D: O1d), s-1 (longitude,latitude,alevel,time)
+> #"UNKNOWN",       "photo1d",       "photo1d",       "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ##. Phytotoxic ozone dose, mol m-2 s-1 (longitude,latitude,time)
+> #"UNKNOWN",       "pod0",          "pod0",          "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> ###. Tropopause Air Pressure, Pa (longitude,latitude,time)
+> # "tracers",       "ptp",           "ptp",           "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. cloud-top effective droplet radius, m (longitude,latitude,time)
+> # "cloudrad",      "reffclwtop",    "reffclwtop",    "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. TOA Outgoing Aerosol-Free Longwave Radiation, W m-2 (longitude,latitude,time)
+> # "radiation",     "rlutaf",        "rlutaf",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. TOA Outgoing Clear-Sky, Aerosol-Free Longwave Radiation, W m-2 (longitude,latitude,time)
+> # "radiation",     "rlutcsaf",      "rlutcsaf",      "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. TOA Outgoing Aerosol-Free Shortwave Radiation, W m-2 (longitude,latitude,time)
+> # "radiation",     "rsutaf",        "rsutaf",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. TOA Outgoing Clear-Sky, Aerosol-Free Shortwave Radiation, W m-2 (longitude,latitude,time)
+> # "radiation",     "rsutcsaf",      "rsutcsaf",      "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. SO2 volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+> # "tracers",       "so2_mol_mol",   "so2",           "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Tropopause Air Temperature, K (longitude,latitude,time)
+> # "tracers",       "tatp",          "tatp",          "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. tendency_of_air_temperature_due_to_longwave_heating, K s-1 (longitude,latitude,alevel,time)
+> # "radiation",     "tntrl",         "tntrl",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. tendency_of_air_temperature_due_to_shortwave_heating, K s-1 (longitude,latitude,alevel,time)
+> # "radiation",     "tntrs",         "tntrs",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Total Ozone Column, m (longitude,latitude,time)
+> # "tracers",       "toz",           "toz",           "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. tropospheric ozone column, m (longitude,latitude,time)
+> # "tracers",       "tropoz",        "tropoz",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. air temperature at cloud top, K (longitude,latitude,time)
+> ##"UNKNOWN",       "ttop",          "ttop",          "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Eastward Wind, m s-1 (longitude,latitude,alevel,time)
+> # "atmos",         "ua",            "ua",            "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Northward Wind, m s-1 (longitude,latitude,alevel,time)
+> # "atmos",         "va",            "va",            "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Upward Air Velocity, m s-1 (longitude,latitude,alevel,time)
+> # "atmos",         "wa",            "wa",            "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. wet deposition rate of black carbon aerosol mass, kg m-2 s-1 (longitude,latitude,time)
+> # "moist",         "wetbc",         "wetbc",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. wet deposition rate of dust, kg m-2 s-1 (longitude,latitude,time)
+> # "moist",         "wetdust",       "wetdust",       "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. wet deposition rate of nh3, kg m-2 s-1 (longitude,latitude,time)
+> # "moist",         "nh3_wetdep_kg_m2_s",   "wetnh3",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. wet deposition rate of nh4, kg m-2 s-1 (longitude,latitude,time)
+> # "moist",         "nh4_wetdep_kg_m2_s",   "wetnh4",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. wet deposition of noy incl aerosol nitrate, kg m-2 s-1 (longitude,latitude,time)
+> ##"UNKNOWN",       "wetnoy",        "wetnoy",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. wet deposition rate of dry aerosol total organic matter, kg m-2 s-1 (longitude,latitude,time)
+> # "moist",         "wetoa",         "wetoa",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. wet deposition rate of so2, kg m-2 s-1 (longitude,latitude,time)
+> # "moist",         "so2_wetdep_kg_m2_s", "wetso2",   "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. wet deposition rate of so4, kg m-2 s-1 (longitude,latitude,time)
+> # "moist",         "so4_wetdep_kg_m2_s", "wetso4",   "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. wet deposition rate of seasalt, kg m-2 s-1 (longitude,latitude,time)
+> # "moist",         "wetss",         "wetss",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> #
+> ###. Geopotential Height, m (longitude,latitude,alevel,time)
+> # "phys",          "zg",            "zg",            "aerosol_month_cmip",        "all",  .true.,  "none", 2
+> #
+> ###. Tropopause Altitude, m (longitude,latitude,time)
+> # "tracers",       "ztp",           "ztp",           "aerosol_month_cmip",      "all",  .true.,  "none", 2
+> # Simplified diag_table for running AWG AMIP experiments
+1144a1508,1509
+> # these variables will first be output on 19 particular pressure levels, and then
+> # in the pp stage, before the prepublisher the desired 8 levels can be extracted. 
+1147c1512
+<  "moist_plev8",   "hur",                    "hur_unmsk",     "atmos_daily_plev8",         "all",  .true.,  "none", 2
+---
+>  "moist_plev19",   "hur",                    "hur_unmsk",     "atmos_daily_plev8",         "all",  .true.,  "none", 2
+1150c1515
+<  "atmos_plev8",   "hus",                    "hus_unmsk",     "atmos_daily_plev8",         "all",  .true.,  "none", 2
+---
+>  "atmos_plev19",   "hus",                    "hus_unmsk",     "atmos_daily_plev8",         "all",  .true.,  "none", 2
+1153c1518
+<  "atmos_plev8",   "ta",                     "ta_unmsk",      "atmos_daily_plev8",         "all",  .true.,  "none", 2
+---
+>  "atmos_plev19",   "ta",                     "ta_unmsk",      "atmos_daily_plev8",         "all",  .true.,  "none", 2
+1156c1521
+<  "atmos_plev8",   "ua",                     "ua_unmsk",      "atmos_daily_plev8",         "all",  .true.,  "none", 2
+---
+>  "atmos_plev19",   "ua",                     "ua_unmsk",      "atmos_daily_plev8",         "all",  .true.,  "none", 2
+1159c1524,1526
+<  "atmos_plev8",   "va",                     "va_unmsk",      "atmos_daily_plev8",         "all",  .true.,  "none", 2
+---
+>  "atmos_plev19",   "va",                     "va_unmsk",      "atmos_daily_plev8",         "all",  .true.,  "none", 2
+> ## geopotential height, m (longitude,latitude,plev8)
+>  "atmos_plev19",   "zg",                     "zg_unmsk",      "atmos_daily_plev8",         "all",  .true.,  "none", 2
+1162c1529
+<  "atmos_plev8",   "wap",                    "wap_unmsk",     "atmos_daily_plev8",         "all",  .true.,  "none", 2
+---
+>  "atmos_plev19",   "wap",                    "wap_unmsk",     "atmos_daily_plev8",         "all",  .true.,  "none", 2
+1190c1557
+< #############
+---
+> ##################
+1192,1253c1559,1613
+< #############
+< "atmos_daily",                1, "days",      1,  "days",   "time"
+< #############
+< # atmos_daily
+< #############
+< ## Cloud Droplet Number Concentration of Convective Cloud Tops, m-3 (longitude,latitude)
+< ## Eday. CFMIP (P-1)
+< #"UNKNOWN",       "ccldncl",                "ccldncl",       "atmos_daily",               "all",  .true.,  "none", 2
+< ## Ice Crystal Number Concentration of Cloud Tops, m-3 (longitude,latitude)
+< ## Eday. CFMIP (P-1)
+< #"UNKNOWN",       "cldnci",                 "cldnci",        "atmos_daily",               "all",  .true.,  "none", 2
+< ## Column Integrated Cloud Droplet Number, m-2 (longitude,latitude)
+< ## Eday. CFMIP (P-1)
+<  "cloudrad",      "cldnvi",                 "cldnvi",        "atmos_daily",               "all",  .true.,  "none", 2
+< ## Convective Ice Water Path, kg m-2 (longitude,latitude)
+< ## Eday. CFMIP (P-1)
+< #"UNKNOWN",       "clivic",                 "clivic",        "atmos_daily",               "all",  .true.,  "none", 2
+< ## Convective Condensed Water Path, kg m-2 (longitude,latitude)
+< ## Eday. CFMIP (P-1)
+< #"UNKNOWN",       "clwvic",                 "clwvic",        "atmos_daily",               "all",  .true.,  "none", 2
+< ## Load of Black Carbon Aerosol, kg m-2 (longitude,latitude)
+< ## Eday. CFMIP (P-1)
+<  "tracers",       "loadbc",                 "loadbc",        "atmos_daily",               "all",  .true.,  "none", 2
+< ## Load of Dust, kg m-2 (longitude,latitude)
+< ## Eday. CFMIP (P-1)
+<  "tracers",       "loaddust",               "loaddust",      "atmos_daily",               "all",  .true.,  "none", 2
+< ## Load of NH4, kg m-2 (longitude,latitude)
+< ## Eday. CFMIP (P-1)
+<  "tracers",       "loadnh4",                "loadnh4",       "atmos_daily",               "all",  .true.,  "none", 2
+< ## Load of NO3, kg m-2 (longitude,latitude)
+< ## Eday. CFMIP (P-1)
+<  "tracers",       "loadno3",                "loadno3",       "atmos_daily",               "all",  .true.,  "none", 2
+< ## Load of Dry Aerosol Organic Matter, kg m-2 (longitude,latitude)
+< ## Eday. CFMIP (P-1)
+<  "radiation",     "loadoa",                 "loadoa",        "atmos_daily",               "all",  .true.,  "none", 2
+< ## Load of Dry Aerosol Primary Organic Matter, kg m-2 (longitude,latitude)
+< ## Eday. CFMIP (P-1)
+<  "radiation",     "loadpoa",                "loadpoa",       "atmos_daily",               "all",  .true.,  "none", 2
+< ## Load of SO4, kg m-2 (longitude,latitude)
+< ## Eday. CFMIP (P-1)
+<  "radiation",     "loadso4",                "loadso4",       "atmos_daily",               "all",  .true.,  "none", 2
+< ## Load of Dry Aerosol Secondary Organic Matter, kg m-2 (longitude,latitude)
+< ## Eday. CFMIP (P-1)
+<  "radiation",     "loadsoa",                "loadsoa",       "atmos_daily",               "all",  .true.,  "none", 2
+< ## Load of Seasalt, kg m-2 (longitude,latitude)
+< ## Eday. CFMIP (P-1)
+<  "tracers",       "loadss",                 "loadss",        "atmos_daily",               "all",  .true.,  "none", 2
+< ## Cloud-Top Effective Droplet Radius In Convective Cloud, m (longitude,latitude)
+< ## Eday. CFMIP (P-1)
+< #"UNKNOWN",       "reffcclwtop",            "reffcclwtop",   "atmos_daily",               "all",  .true.,  "none", 2
+< ## Cloud-Top Effective Droplet Radius In Stratiform Cloud, m (longitude,latitude)
+< ## Eday. CFMIP (P-1)
+< #"UNKNOWN",       "reffsclwtop",            "reffsclwtop",   "atmos_daily",               "all",  .true.,  "none", 2
+< ## Surface Diffuse Downwelling Clear Sky Shortwave Radiation, W m-2 (longitude,latitude)
+< ## Eday. CFMIP (P-1)
+<  "radiation",     "rsdscsdiff",             "rsdscsdiff",    "atmos_daily",               "all",  .true.,  "none", 2
+< ## Surface Diffuse Downwelling Shortwave Radiation, W m-2 (longitude,latitude)
+< ## Eday. CFMIP (P-1)
+<  "radiation",     "rsdsdiff",               "rsdsdiff",      "atmos_daily",               "all",  .true.,  "none", 2
+< ## Cloud Droplet Number Concentration of Stratiform Cloud Tops, m-3 (longitude,latitude)
+< ## Eday. CFMIP (P-1)
+< #"UNKNOWN",       "scldncl",                "scldncl",       "atmos_daily",               "all",  .true.,  "none", 2
+---
+> # Version: 1.00.15
+> ##################
+>  "atmos_daily_cmip",        24, "hours",    1,  "days",  "time",
+>  "aerosol_daily_cmip",      24, "hours",    1,  "days",  "time",
+> ##################
+> ##. PARASOL Reflectance, 1.0 (longitude,latitude,sza5,time)
+> #"UNKNOWN",       "parasolRefl",   "parasolRefl",   "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. MODIS Optical Thickness-Particle Size joint  distribution, liquid, % (longitude,latitude,plev7c,effectRadLi,tau,time)
+> #"UNKNOWN",       "jpdftaureliqmodis", "jpdftaureliqmodis", "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. MODIS Optical Thickness-Particle Size joint  distribution, ice, % (longitude,latitude,plev7c,effectRadIc,tau,time)
+> #"UNKNOWN",       "jpdftaureicemodis", "jpdftaureicemodis", "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Convective Condensed Water Path, kg m-2 (longitude,latitude,time)
+> #"UNKNOWN",       "clwvic",        "clwvic",        "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Convective Ice Water Path, kg m-2 (longitude,latitude,time)
+> #"UNKNOWN",       "clivic",        "clivic",        "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Load of Dry Aerosol Organic Matter, kg m-2 (longitude,latitude,time)
+>  "radiation",     "loadoa",        "loadoa",        "aerosol_daily_cmip",      "all",  .true.,  "none", 2
+> ##. Load of Dry Aerosol Secondary Organic Matter, kg m-2 (longitude,latitude,time)
+>  "radiation",     "loadsoa",       "loadsoa",       "aerosol_daily_cmip",      "all",  .true.,  "none", 2
+> ##. Load of Black Carbon Aerosol, kg m-2 (longitude,latitude,time)
+>  "tracers",       "fam_bc_col_kg_m2", "loadbc",     "aerosol_daily_cmip",      "all",  .true.,  "none", 2
+> ##. Load of SO4, kg m-2 (longitude,latitude,time)
+>  "radiation",     "loadso4",       "loadso4",       "aerosol_daily_cmip",      "all",  .true.,  "none", 2
+> ##. Load of Dust, kg m-2 (longitude,latitude,time)
+>  "tracers",       "fam_dust_col_kg_m2", "loaddust", "aerosol_daily_cmip",      "all",  .true.,  "none", 2
+> ##. Load of Seasalt, kg m-2 (longitude,latitude,time)
+>  "tracers",       "fam_seasalt_col_kg_m2", "loadss", "aerosol_daily_cmip",     "all",  .true.,  "none", 2
+> ##. Load of NO3, kg m-2 (longitude,latitude,time)
+>  "tracers",       "loadno3",       "loadno3",       "aerosol_daily_cmip",      "all",  .true.,  "none", 2
+> ##. Load of NH4, kg m-2 (longitude,latitude,time)
+>  "tracers",       "loadnh4",       "loadnh4",       "aerosol_daily_cmip",      "all",  .true.,  "none", 2
+> ##. Cloud-Top Effective Droplet Radius In Stratiform Cloud, m (longitude,latitude,time)
+> #"UNKNOWN",       "reffsclwtop",   "reffsclwtop",   "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Cloud-Top Effective Droplet Radius In Convective Cloud, m (longitude,latitude,time)
+> #"UNKNOWN",       "reffcclwtop",   "reffcclwtop",   "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Cloud Droplet Number Concentration of Stratiform Cloud Tops, m-3 (longitude,latitude,time)
+> #"UNKNOWN",       "scldncl",       "scldncl",       "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Cloud Droplet Number Concentration of Convective Cloud Tops, m-3 (longitude,latitude,time)
+> #"UNKNOWN",       "ccldncl",       "ccldncl",       "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Ice Crystal Number Concentration of Cloud Tops, m-3 (longitude,latitude,time)
+> #"UNKNOWN",       "cldnci",        "cldnci",        "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Load of Dry Aerosol Primary Organic Matter, kg m-2 (longitude,latitude,time)
+>  "radiation",     "loadpoa",       "loadpoa",       "aerosol_daily_cmip",      "all",  .true.,  "none", 2
+> ##. Surface Diffuse Downwelling Shortwave Radiation, W m-2 (longitude,latitude,time)
+>  "radiation",     "rsdsdiff",      "rsdsdiff",      "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Surface Diffuse Downwelling Clear Sky Shortwave Radiation, W m-2 (longitude,latitude,time)
+>  "radiation",     "rsdscsdiff",    "rsdscsdiff",    "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Column Integrated Cloud Droplet Number, m-2 (longitude,latitude,time)
+>  "cloudrad",      "cldnvi",        "cldnvi",        "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ###. Surface Temperature, K (longitude,latitude,time)
+> # "flux",          "ts",            "ts",            "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ###. Water Vapor Path, kg m-2 (longitude,latitude,time)
+> # "moist",         "prw",           "prw",           "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ###. Geopotential Height, m (longitude,latitude,plev19,time)
+> # "atmos_plev19",  "zg",            "zg_plev19",     "atmos_daily_cmip",        "all",  .true.,  "none", 2
+1560c1920
+<  "cosp",          "ctpisccp",              "pctisccp",       "atmos_level_cmip",        "all",  .true.,  "none", 2
+---
+>  "cosp",          "ctpisccp",              "pctisccp",       "atmos_month_cmip",        "all",  .true.,  "none", 2
+1725c2085
+< ##############
+---
+> ###################
+1726a2087,2177
+> # Version: 1.00.15
+> ###################
+>  "atmos_level_daily_cmip",        24, "hours",    1,  "days",  "time",
+> ##. Auxiliary fields required for model level output
+>  "cmip",          "lev_bnds",      "lev_bnds",      "atmos_level_daily_cmip",        "all",  .false., "none", 1
+>  "cmip",          "ap",            "ap",            "atmos_level_daily_cmip",        "all",  .false., "none", 1
+>  "cmip",          "b",             "b",             "atmos_level_daily_cmip",        "all",  .false., "none", 1
+>  "cmip",          "ap_bnds",       "ap_bnds",       "atmos_level_daily_cmip",        "all",  .false., "none", 1
+>  "cmip",          "b_bnds",        "b_bnds",        "atmos_level_daily_cmip",        "all",  .false., "none", 1
+>  "cmip",          "ap_half",       "ap_half",       "atmos_level_daily_cmip",        "all",  .false., "none", 1
+>  "cmip",          "b_half",        "b_half",        "atmos_level_daily_cmip",        "all",  .false., "none", 1 
+>  "atmos",         "p700",          "p700",          "atmos_daily_cmip",              "all",  .false., "none", 1
+> ###################
+> ##. Surface Air Pressure, Pa (longitude,latitude,time)
+>  "atmos",         "ps",            "ps",            "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+> ##. TOA Incident Shortwave Radiation, W m-2 (longitude,latitude,time)
+>  "radiation",     "rsdt",          "rsdt",          "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Top-of-Atmosphere Outgoing Shortwave Radiation, W m-2 (longitude,latitude,time)
+>  "radiation",     "rsut",          "rsut",          "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Surface Downwelling Clear-Sky Shortwave Radiation, W m-2 (longitude,latitude,time)
+>  "radiation",     "rsdscs",        "rsdscs",        "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Surface Upwelling Clear-Sky Shortwave Radiation, W m-2 (longitude,latitude,time)
+>  "radiation",     "rsuscs",        "rsuscs",        "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Surface Downwelling Clear-Sky Longwave Radiation, W m-2 (longitude,latitude,time)
+>  "radiation",     "rldscs",        "rldscs",        "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. TOA Outgoing Clear-sky Longwave Radiation, W m-2 (longitude,latitude,time)
+>  "radiation",     "rlutcs",        "rlutcs",        "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. TOA Outgoing Clear-Sky Shortwave Radiation, W m-2 (longitude,latitude,time)
+>  "radiation",     "rsutcs",        "rsutcs",        "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Condensed Water Path, kg m-2 (longitude,latitude,time)
+>  "moist",         "clwvi",         "clwvi",         "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Ice Water Path, kg m-2 (longitude,latitude,time)
+>  "moist",         "clivi",         "clivi",         "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. omega (=dp/dt), Pa s-1 (longitude,latitude,time,p500)
+>  "atmos",         "wap500",        "wap500",        "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Air Temperature, K (longitude,latitude,time,p700)
+>  "atmos",         "ta700",         "ta700_unmsk",   "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Air Pressure at Convective Cloud Base, Pa (longitude,latitude,time)
+>  "moist",         "ccb",           "ccb",           "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Air Pressure at Convective Cloud Top, Pa (longitude,latitude,time)
+>  "moist",         "cct",           "cct",           "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. ISCCP Total Cloud Cover Percentage, % (longitude,latitude,time)
+>  "cosp",       "tclisccp",         "cltisccp",      "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. ISCCP Mean Cloud Albedo, 1.0 (longitude,latitude,time)
+>  "cosp",          "albisccp",      "albisccp",      "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. ISCCP Mean Cloud Top Pressure, Pa (longitude,latitude,time)
+>  "cosp",          "ctpisccp",      "pctisccp",     "atmos_daily_cmip",         "all",  .true.,  "none", 2
+> ##. CALIPSO Total Cloud Cover Percentage, % (longitude,latitude,time)
+>  "cosp",          "cltcalipso",    "cltcalipso",    "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. CALIPSO Low Level Cloud Cover Percentage, % (longitude,latitude,time,p840)
+>  "cosp",          "cllcalipso",    "cllcalipso",    "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. CALIPSO Mid Level Cloud Percentage, % (longitude,latitude,time,p560)
+>  "cosp",          "clmcalipso",    "clmcalipso",    "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. CALIPSO High Level Cloud Area Percentage, % (longitude,latitude,time,p220)
+>  "cosp",          "clhcalipso",    "clhcalipso",    "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ###. Eastward Wind, m s-1 (longitude,latitude,alevel,time)
+> # "atmos",         "ua",            "ua",            "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+> #
+> ###. Northward Wind, m s-1 (longitude,latitude,alevel,time)
+> # "atmos",         "va",            "va",            "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+> #
+> ###. Air Temperature, K (longitude,latitude,alevel,time)
+> # "atmos",         "ta",            "ta",            "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+> #
+> ###. Specific Humidity, 1.0 (longitude,latitude,alevel,time)
+> # "atmos",         "hus",           "hus",           "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+> #
+> ###. omega (=dp/dt), Pa s-1 (longitude,latitude,alevel,time)
+> # "atmos",         "wap",           "wap",           "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+> #
+> ###. Geopotential Height, m (longitude,latitude,alevel,time)
+> # "phys",          "zg",            "zg",            "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+> #
+> ###. Relative Humidity, % (longitude,latitude,alevel,time)
+> # "moist",         "hur",           "hur",           "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Percentage Cloud Cover, % (longitude,latitude,alevel,time)
+>  "moist",         "cl",            "cl",            "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Mass Fraction of Cloud Liquid Water, kg kg-1 (longitude,latitude,alevel,time)
+> # "moist",         "clw",           "clw",           "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Mass Fraction of Cloud Ice, kg kg-1 (longitude,latitude,alevel,time)
+> # "moist",         "cli",           "cli",           "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Convective Mass Flux, kg m-2 s-1 (longitude,latitude,alevhalf,time)
+> # "moist",         "mc",            "mc",            "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+> ##. CALIPSO Percentage Cloud Cover, % (longitude,latitude,alt40,time)
+> #"cosp",       "clcalipso",         "clcalipso",     "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. ISCCP Cloud Area Fraction, % (longitude,latitude,plev7c,tau,time)
+> # "UNKNOWN",       "clisccp",       "clisccp",       "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Pressure on Model Levels, Pa (longitude,latitude,alevel,time)
+> # "phys",          "pfull",         "pfull",         "atmos_daily_cmip",        "all",  .true.,  "none", 2
+> ##. Pressure on Model Half-Levels, Pa (longitude,latitude,alevhalf,time)
+> # "phys",          "phalf",         "phalf",         "atmos_daily_cmip",        "all",  .true.,  "none", 2
+1728,1794c2179,2406
+< "atmos_daily",                1, "days",      1,  "days",   "time"
+< #############
+< # atmos_daily
+< #############
+< ## ISCCP Mean Cloud Albedo, 1 (longitude,latitude)
+< ## CFday. CMIP5 (P-1)
+<  "cosp",          "albisccp",               "albisccp",      "atmos_daily",               "all",  .true.,  "none", 2
+< ## Air Pressure at Convective Cloud Base, Pa (longitude,latitude)
+< ## CFday. CMIP5 (P-1)
+<  "moist",         "ccb",                    "ccb",           "atmos_daily",               "all",  .true.,  "none", 2
+< ## Air Pressure at Convective Cloud Top, Pa (longitude,latitude)
+< ## CFday. CMIP5 (P-1)
+<  "moist",         "cct",                    "cct",           "atmos_daily",               "all",  .true.,  "none", 2
+< ## CALIPSO High Level Cloud Area Percentage, % (longitude,latitude)
+< ## CFday. CMIP5 (P-1)
+<  "cosp",          "clhcalipso",             "clhcalipso",    "atmos_daily",               "all",  .true.,  "none", 2
+< ## Ice Water Path, kg m-2 (longitude,latitude)
+< ## CFday. CMIP5 (P-1)
+<  "moist",         "clivi",                  "clivi",         "atmos_daily",               "all",  .true.,  "none", 2
+< ## CALIPSO Low Level Cloud Cover Percentage, % (longitude,latitude)
+< ## CFday. CMIP5 (P-1)
+<  "cosp",          "cllcalipso",             "cllcalipso",    "atmos_daily",               "all",  .true.,  "none", 2
+< ## CALIPSO Mid Level Cloud Percentage, % (longitude,latitude)
+< ## CFday. CMIP5 (P-1)
+<  "cosp",          "clmcalipso",             "clmcalipso",    "atmos_daily",               "all",  .true.,  "none", 2
+< ## CALIPSO Total Cloud Cover Percentage, % (longitude,latitude)
+< ## CFday. CMIP5 (P-1)
+<  "cosp",          "cltcalipso",             "cltcalipso",    "atmos_daily",               "all",  .true.,  "none", 2
+< ## ISCCP Total Cloud Cover Percentage, % (longitude,latitude)
+< ## CFday. CMIP5 (P-1)
+< #"UNKNOWN",       "cltisccp",               "cltisccp",      "atmos_daily",               "all",  .true.,  "none", 2
+< ## Condensed Water Path, kg m-2 (longitude,latitude)
+< ## CFday. CMIP5 (P-1)
+<  "moist",         "clwvi",                  "clwvi",         "atmos_daily",               "all",  .true.,  "none", 2
+< ## ISCCP Mean Cloud Top Pressure, Pa (longitude,latitude)
+< ## CFday. CMIP5 (P-1)
+< #"UNKNOWN",       "pctisccp",               "pctisccp",      "atmos_daily",               "all",  .true.,  "none", 2
+< ## Surface Air Pressure, Pa (longitude,latitude)
+< ## CFday. CMIP5 (P-1), VolMIP (P-1)
+<  "atmos",         "ps",                     "ps",            "atmos_daily",               "all",  .true.,  "none", 2
+< ## Surface Downwelling Clear-Sky Longwave Radiation, W m-2 (longitude,latitude)
+< ## CFday. CMIP5 (P-1)
+<  "radiation",     "rldscs",                 "rldscs",        "atmos_daily",               "all",  .true.,  "none", 2
+< ## TOA Outgoing Clear-sky Longwave Radiation, W m-2 (longitude,latitude)
+< ## CFday. CMIP5 (P-1)
+<  "radiation",     "rlutcs",                 "rlutcs",        "atmos_daily",               "all",  .true.,  "none", 2
+< ## Surface Downwelling Clear-Sky Shortwave Radiation, W m-2 (longitude,latitude)
+< ## CFday. CMIP5 (P-1)
+<  "radiation",     "rsdscs",                 "rsdscs",        "atmos_daily",               "all",  .true.,  "none", 2
+< ## TOA Incident Shortwave Radiation, W m-2 (longitude,latitude): Priority 1,3
+< ## CFday. CMIP5 (P-1), DCPP (P-3)
+<  "radiation",     "rsdt",                   "rsdt",          "atmos_daily",               "all",  .true.,  "none", 2
+< ## Surface Upwelling Clear-Sky Shortwave Radiation, W m-2 (longitude,latitude)
+< ## CFday. CMIP5 (P-1)
+<  "radiation",     "rsuscs",                 "rsuscs",        "atmos_daily",               "all",  .true.,  "none", 2
+< ## Top-of-Atmosphere Outgoing Shortwave Radiation, W m-2 (longitude,latitude): Priority 1,3
+< ## CFday. CMIP5 (P-1), DCPP (P-3)
+<  "radiation",     "rsut",                   "rsut",          "atmos_daily",               "all",  .true.,  "none", 2
+< ## TOA Outgoing Clear-Sky Shortwave Radiation, W m-2 (longitude,latitude)
+< ## CFday. CMIP5 (P-1)
+<  "radiation",     "rsutcs",                 "rsutcs",        "atmos_daily",               "all",  .true.,  "none", 2
+< ## Air Temperature, K (longitude,latitude)
+< ## CFday. CMIP5 (P-1)
+<  "atmos",         "ta700",                  "ta700",         "atmos_daily",               "all",  .true.,  "none", 2
+< ## omega (=dp/dt), Pa s-1 (longitude,latitude)
+< ## CFday. CMIP5 (P-1), PMIP (P-1)
+<  "atmos",         "wap500",                 "wap500",        "atmos_daily",               "all",  .true.,  "none", 2
+---
+> ## atmos_daily_cosp
+> ##############
+> ## REALMS:   atmos                               GROUPS: AERday, CFday, Eday, day
+> ## FREQS:    day                                 MIPS:   AerChemMIP, CFMIP, CMIP, CMIP5, CORDEX, DAMIP, DCPP, DynVar, GeoMIP, HighResMIP, LS3MIP, LUMIP, PMIP, RFMIP, VIACSAB, VolMIP
+> ## PRIORITY: 1, 2, 3                            
+> ## Fields:   83
+> #
+> ### Cloud Droplet Number Concentration of Convective Cloud Tops, m-3 (longitude,latitude)
+> ### Eday. CFMIP (P-1)
+> ##"UNKNOWN",       "ccldncl",                "ccldncl",       "atmos_daily",               "all",  .true.,  "none", 2
+> #
+> ### Ice Crystal Number Concentration of Cloud Tops, m-3 (longitude,latitude)
+> ### Eday. CFMIP (P-1)
+> ##"UNKNOWN",       "cldnci",                 "cldnci",        "atmos_daily",               "all",  .true.,  "none", 2
+> #
+> ### Column Integrated Cloud Droplet Number, m-2 (longitude,latitude)
+> ### Eday. CFMIP (P-1)
+> # "cloudrad",      "cldnvi",                 "cldnvi",        "atmos_daily",               "all",  .true.,  "none", 2
+> #
+> ### Convective Ice Water Path, kg m-2 (longitude,latitude)
+> ### Eday. CFMIP (P-1)
+> ##"UNKNOWN",       "clivic",                 "clivic",        "atmos_daily",               "all",  .true.,  "none", 2
+> #
+> ### PARASOL Reflectance, 1.0 (longitude,latitude)
+> ### Eday. CFMIP (P-1)
+> #"cosp",       "parasol_refl",            "parasolRefl",   "atmos_daily_cmip",               "all",  .true.,  "none", 2
+> #
+> ####################
+> ## atmos_daily_plev7
+> ####################
+> ## REALMS:   atmos                               GROUPS: CFday, Eday
+> ## FREQS:    day                                 MIPS:   CFMIP, CMIP5
+> ## PRIORITY: 1                                  
+> ## Fields:   3
+> #
+> ### ISCCP Cloud Area Fraction, % (longitude,latitude,plev7c)
+> ### CFday. CFMIP (P-1), CMIP5 (P-1)
+> ##"UNKNOWN_plev7", "clisccp",                "clisccp_unmsk", "atmos_daily_plev7",         "all",  .true.,  "none", 2
+> # "cosp", "clisccp_1_1", "clisccp_1_1", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_2_1", "clisccp_2_1", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_3_1", "clisccp_3_1", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_4_1", "clisccp_4_1", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_5_1", "clisccp_5_1", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_6_1", "clisccp_6_1", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_7_1", "clisccp_7_1", "atmos_daily_cmip", "all", .true., "none", 2
+> #
+> # "cosp", "clisccp_1_2", "clisccp_1_2", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_2_2", "clisccp_2_2", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_3_2", "clisccp_3_2", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_4_2", "clisccp_4_2", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_5_2", "clisccp_5_2", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_6_2", "clisccp_6_2", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_7_2", "clisccp_7_2", "atmos_daily_cmip", "all", .true., "none", 2
+> #
+> # "cosp", "clisccp_1_3", "clisccp_1_3", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_2_3", "clisccp_2_3", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_3_3", "clisccp_3_3", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_4_3", "clisccp_4_3", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_5_3", "clisccp_5_3", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_6_3", "clisccp_6_3", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_7_3", "clisccp_7_3", "atmos_daily_cmip", "all", .true., "none", 2
+> #
+> # "cosp", "clisccp_1_4", "clisccp_1_4", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_2_4", "clisccp_2_4", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_3_4", "clisccp_3_4", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_4_4", "clisccp_4_4", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_5_4", "clisccp_5_4", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_6_4", "clisccp_6_4", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_7_4", "clisccp_7_4", "atmos_daily_cmip", "all", .true., "none", 2
+> #
+> # "cosp", "clisccp_1_5", "clisccp_1_5", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_2_5", "clisccp_2_5", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_3_5", "clisccp_3_5", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_4_5", "clisccp_4_5", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_5_5", "clisccp_5_5", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_6_5", "clisccp_6_5", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_7_5", "clisccp_7_5", "atmos_daily_cmip", "all", .true., "none", 2
+> #
+> # "cosp", "clisccp_1_6", "clisccp_1_6", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_2_6", "clisccp_2_6", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_3_6", "clisccp_3_6", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_4_6", "clisccp_4_6", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_5_6", "clisccp_5_6", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_6_6", "clisccp_6_6", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_7_6", "clisccp_7_6", "atmos_daily_cmip", "all", .true., "none", 2
+> #
+> # "cosp", "clisccp_1_7", "clisccp_1_7", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_2_7", "clisccp_2_7", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_3_7", "clisccp_3_7", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_4_7", "clisccp_4_7", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_5_7", "clisccp_5_7", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_6_7", "clisccp_6_7", "atmos_daily_cmip", "all", .true., "none", 2
+> # "cosp", "clisccp_7_7", "clisccp_7_7", "atmos_daily_cmip", "all", .true., "none", 2
+> #
+> ##
+> ##
+> #### MODIS Optical Thickness-Particle Size joint  distribution, liquid, % (longitude,latitude,plev7c)
+> #### Eday. CFMIP (P-1)
+> ##
+> #### MODIS Optical Thickness-Particle Size joint  distribution, ice, % (longitude,latitude,plev7c)
+> ## asked for as part of variable group CFMIP-cfDayExtra
+> ###"UNKNOWN_plev7", "jpdftaureicemodis",      "jpdftaureicemodis_unmsk", "atmos_month_plev7",         "all",  .true.,  "none", 2
+> #"cosp", "taurefficemodis_1_1",   "jpdftaureicemodis_1_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_2_1",   "jpdftaureicemodis_2_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_3_1",   "jpdftaureicemodis_3_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_4_1",   "jpdftaureicemodis_4_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_5_1",   "jpdftaureicemodis_5_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_6_1",   "jpdftaureicemodis_6_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_7_1",   "jpdftaureicemodis_7_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #
+> #"cosp", "taurefficemodis_1_2",   "jpdftaureicemodis_1_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_2_2",   "jpdftaureicemodis_2_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_3_2",   "jpdftaureicemodis_3_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_4_2",   "jpdftaureicemodis_4_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_5_2",   "jpdftaureicemodis_5_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_6_2",   "jpdftaureicemodis_6_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_7_2",   "jpdftaureicemodis_7_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #
+> #"cosp", "taurefficemodis_1_3",   "jpdftaureicemodis_1_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_2_3",   "jpdftaureicemodis_2_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_3_3",   "jpdftaureicemodis_3_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_4_3",   "jpdftaureicemodis_4_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_5_3",   "jpdftaureicemodis_5_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_6_3",   "jpdftaureicemodis_6_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_7_3",   "jpdftaureicemodis_7_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #
+> #"cosp", "taurefficemodis_1_4",   "jpdftaureicemodis_1_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_2_4",   "jpdftaureicemodis_2_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_3_4",   "jpdftaureicemodis_3_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_4_4",   "jpdftaureicemodis_4_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_5_4",   "jpdftaureicemodis_5_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_6_4",   "jpdftaureicemodis_6_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_7_4",   "jpdftaureicemodis_7_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #
+> #"cosp", "taurefficemodis_1_5",   "jpdftaureicemodis_1_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_2_5",   "jpdftaureicemodis_2_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_3_5",   "jpdftaureicemodis_3_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_4_5",   "jpdftaureicemodis_4_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_5_5",   "jpdftaureicemodis_5_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_6_5",   "jpdftaureicemodis_6_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_7_5",   "jpdftaureicemodis_7_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #
+> #"cosp", "taurefficemodis_1_6",   "jpdftaureicemodis_1_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_2_6",   "jpdftaureicemodis_2_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_3_6",   "jpdftaureicemodis_3_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_4_6",   "jpdftaureicemodis_4_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_5_6",   "jpdftaureicemodis_5_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_6_6",   "jpdftaureicemodis_6_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_7_6",   "jpdftaureicemodis_7_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #
+> #"cosp", "taurefficemodis_1_7",   "jpdftaureicemodis_1_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_2_7",   "jpdftaureicemodis_2_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_3_7",   "jpdftaureicemodis_3_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_4_7",   "jpdftaureicemodis_4_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_5_7",   "jpdftaureicemodis_5_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_6_7",   "jpdftaureicemodis_6_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taurefficemodis_7_7",   "jpdftaureicemodis_7_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #
+> ###"UNKNOWN_plev7", "jpdftaureliqmodis",      "jpdftaureliqmodis_unmsk", "atmos_daily_plev7",         "all",  .true.,  "none", 2
+> #
+> #"cosp", "taureffliqmodis_1_1",   "jpdftaureliqmodis_1_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_2_1",   "jpdftaureliqmodis_2_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_3_1",   "jpdftaureliqmodis_3_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_4_1",   "jpdftaureliqmodis_4_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_5_1",   "jpdftaureliqmodis_5_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_6_1",   "jpdftaureliqmodis_6_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_7_1",   "jpdftaureliqmodis_7_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #
+> #"cosp", "taureffliqmodis_1_2",   "jpdftaureliqmodis_1_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_2_2",   "jpdftaureliqmodis_2_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_3_2",   "jpdftaureliqmodis_3_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_4_2",   "jpdftaureliqmodis_4_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_5_2",   "jpdftaureliqmodis_5_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_6_2",   "jpdftaureliqmodis_6_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_7_2",   "jpdftaureliqmodis_7_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #
+> #"cosp", "taureffliqmodis_1_3",   "jpdftaureliqmodis_1_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_2_3",   "jpdftaureliqmodis_2_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_3_3",   "jpdftaureliqmodis_3_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_4_3",   "jpdftaureliqmodis_4_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_5_3",   "jpdftaureliqmodis_5_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_6_3",   "jpdftaureliqmodis_6_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_7_3",   "jpdftaureliqmodis_7_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #
+> #"cosp", "taureffliqmodis_1_4",   "jpdftaureliqmodis_1_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_2_4",   "jpdftaureliqmodis_2_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_3_4",   "jpdftaureliqmodis_3_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_4_4",   "jpdftaureliqmodis_4_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_5_4",   "jpdftaureliqmodis_5_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_6_4",   "jpdftaureliqmodis_6_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_7_4",   "jpdftaureliqmodis_7_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #
+> #"cosp", "taureffliqmodis_1_5",   "jpdftaureliqmodis_1_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_2_5",   "jpdftaureliqmodis_2_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_3_5",   "jpdftaureliqmodis_3_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_4_5",   "jpdftaureliqmodis_4_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_5_5",   "jpdftaureliqmodis_5_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_6_5",   "jpdftaureliqmodis_6_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_7_5",   "jpdftaureliqmodis_7_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #
+> #"cosp", "taureffliqmodis_1_6",   "jpdftaureliqmodis_1_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_2_6",   "jpdftaureliqmodis_2_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_3_6",   "jpdftaureliqmodis_3_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_4_6",   "jpdftaureliqmodis_4_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_5_6",   "jpdftaureliqmodis_5_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_6_6",   "jpdftaureliqmodis_6_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_7_6",   "jpdftaureliqmodis_7_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #
+> #"cosp", "taureffliqmodis_1_7",   "jpdftaureliqmodis_1_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_2_7",   "jpdftaureliqmodis_2_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_3_7",   "jpdftaureliqmodis_3_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_4_7",   "jpdftaureliqmodis_4_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_5_7",   "jpdftaureliqmodis_5_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_6_7",   "jpdftaureliqmodis_6_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> #"cosp", "taureffliqmodis_7_7",   "jpdftaureliqmodis_7_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+> ### MODIS Ice Cloud Area Percentage, % (longitude,latitude)
+> ### Emon. CFMIP (P-1)
+> #"cosp",       "iclmodis",               "climodis",      "atmos_daily_cmip",               "all",  .true.,  "none", 2
+> ##. MODIS Liquid Cloud Fraction, % (longitude,latitude,time)
+> #"cosp",       "lclmodis",               "clwmodis",      "atmos_daily_cmip",               "all",  .true.,  "none", 2
+> #
+> #### CALIPSO ice and liquid on tempsurfaces, % (longitude,latitude,tmpindex)
+> ## does not appear to be part of the data request
+> #"cosp",       "clcalipsotmp",           "clcalipsotmp",  "atmos_level_daily_cmip",               "all",  .true.,  "none", 2
+> #"cosp",       "clcalipsotmpice",        "clcalipsotmpice",  "atmos_level_daily_cmip",               "all",  .true.,  "none", 2
+> #"cosp",       "clcalipsotmpliq",        "clcalipsotmpliq",  "atmos_level_daily_cmip",               "all",  .true.,  "none", 2
+> #"cosp",       "clcalipsotmpun",         "clcalipsotmpun",  "atmos_level_daily_cmip",               "all",  .true.,  "none", 2
+> ##
+3110c3722
+<       solar_dataset_entry = 1860,1,1,0,0
+---
+>       solar_dataset_entry = 1,1,1,0,0

@@ -1,0 +1,34 @@
+#!/usr/bin/perl
+use warnings FATAL => 'all';
+use strict;
+use autodie;
+use Data::Dumper;
+
+my %sites;
+open my $fh, 'cmip6-cfsites-locations.txt';
+while (<$fh>) {
+    my ($site, $lon, $lat) = split ',';
+    s/ +//g for $site, $lon, $lat;
+    $sites{$site} = [$lon, $lat];
+}
+#print Dumper %sites;
+
+while (<>) {
+    if (/CFsite_001/ and ! /^\s*#/) {
+        for my $site (1 .. 126) {
+            my ($lon, $lat) = @{$sites{$site}};
+            $site = 0 . $site until length $site == 3;
+            #print "doing site=$site lon=$lon lat=$lat\n";
+            my $line = $_;
+            for ($line) {
+                s/CFsite_001/CFsite_$site/;
+                # fields in cmip module are 2D auxillary fields that shouldn't have the regional specification
+                s/"none"/"$lon, $lon, $lat, $lat, -1, -1"/ unless /^\s*"cmip/;
+            }
+            print $line;
+        }
+    }
+    else {
+        print;
+    }
+}

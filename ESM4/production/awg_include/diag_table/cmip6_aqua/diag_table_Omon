@@ -1,0 +1,46 @@
+#############
+# Table: Omon
+#############
+
+"ocean_phys_month",           1, "months",    1,  "days",   "time"
+
+
+##################
+# ocean_phys_month
+##################
+
+## Ocean Grid-Cell Mass per area, kg m-2 (longitude,latitude,olevel)
+## Omon. CFMIP (P-1), CMIP5 (P-1), DAMIP (P-1), PMIP (P-1), VIACSAB (P-1)
+ "ocean_model",   "masscello",              "masscello",     "ocean_phys_month",          "all",  .true.,  "none", 2
+
+## Sea Water Salinity, 0.001 (longitude,latitude,olevel): Priority 1,2
+## Omon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DAMIP (P-1), DCPP (P-2), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "ocean_model",   "so",                     "so",            "ocean_phys_month",          "all",  .true.,  "none", 2
+
+## Sea Water Potential Temperature, degC (longitude,latitude,olevel): Priority 1,2
+## Omon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DAMIP (P-1), DCPP (P-2), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "ocean_model",   "thetao",                 "thetao",        "ocean_phys_month",          "all",  .true.,  "none", 2
+
+## Ocean Model Cell Thickness, m (longitude,latitude,olevel): Priority 1,3
+## Omon. CFMIP (P-1), CMIP5 (P-3), DAMIP (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "ocean_model",   "thkcello",               "thkcello",      "ocean_phys_month",          "all",  .true.,  "none", 2
+
+## Sea Water X Velocity, m s-1 (longitude,latitude,olevel): Priority 1,2
+## Omon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DAMIP (P-1), DCPP (P-2), PMIP (P-1), VIACSAB (P-1)
+ "ocean_model",   "uo",                     "uo",            "ocean_phys_month",          "all",  .true.,  "none", 2
+
+## Sea Water Y Velocity, m s-1 (longitude,latitude,olevel): Priority 1,2
+## Omon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DAMIP (P-1), DCPP (P-2), PMIP (P-1), VIACSAB (P-1)
+ "ocean_model",   "vo",                     "vo",            "ocean_phys_month",          "all",  .true.,  "none", 2
+
+## Upward Ocean Mass Transport, kg s-1 (longitude,latitude,olevel): Priority 1,3
+## Omon. CFMIP (P-1), CMIP5 (P-1), DAMIP (P-1), DCPP (P-3), VIACSAB (P-1)
+ "ocean_model",   "wmo",                    "wmo",           "ocean_phys_month",          "all",  .true.,  "none", 2
+
+## Depth Below Geoid of Ocean Layer, m (longitude,latitude,olevel)
+## Omon. CFMIP (P-1), CMIP5 (P-1), DAMIP (P-1), VIACSAB (P-1)
+ "ocean_model",   "zfullo",                 "zfullo",        "ocean_phys_month",          "all",  .true.,  "none", 2
+
+## Depth Below Geoid of Interfaces Between Ocean Layers, m (longitude,latitude,olevel)
+## Omon. CFMIP (P-1), CMIP5 (P-1), DAMIP (P-1), VIACSAB (P-1)
+ "ocean_model",   "zhalfo",                 "zhalfo",        "ocean_phys_month",          "all",  .true.,  "none", 2

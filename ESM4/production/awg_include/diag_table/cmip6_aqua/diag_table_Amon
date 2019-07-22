@@ -1,0 +1,302 @@
+#############
+# Table: Amon
+#############
+
+ "atmos_month_cmip",         1, "months",    1,  "days",  "time",
+ "atmos_level_cmip",         1, "months",    1,  "days",  "time",
+# "atmos_scalar",             1, "months",    1,  "days",  "time",
+
+# #############
+##. auxiliary variables
+# #############
+##. Auxiliary fields required for model level output
+ "cmip",          "ap",            "ap",            "atmos_level_cmip",        "all",  .false., "none", 1
+ "cmip",          "b",             "b",             "atmos_level_cmip",        "all",  .false., "none", 1
+ "cmip",          "ap_bnds",       "ap_bnds",       "atmos_level_cmip",        "all",  .false., "none", 1
+ "cmip",          "b_bnds",        "b_bnds",        "atmos_level_cmip",        "all",  .false., "none", 1
+ "cmip",          "lev_bnds",      "lev_bnds",      "atmos_level_cmip",        "all",  .false., "none", 1
+ "cmip",          "ap_half",       "ap_half",       "atmos_level_cmip",        "all",  .false., "none", 1
+ "cmip",          "b_half",        "b_half",        "atmos_level_cmip",        "all",  .false., "none", 1
+
+#############
+# atmos_month
+#############
+
+## Air Pressure at Convective Cloud Base, Pa (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP5 (P-1)
+ "moist",         "ccb",                    "ccb",           "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Air Pressure at Convective Cloud Top, Pa (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP5 (P-1)
+ "moist",         "cct",                    "cct",           "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Global Mean Mole Fraction of CH4, 1e-09 ()
+## Amon. CFMIP (P-1), CMIP5 (P-1), PMIP (P-1)
+ "radiation",     "ch4global",              "ch4global",     "atmos_scalar",               "all",  .true.,  "none", 2
+
+## Global Mean Mole Fraction of CH4, 1e-09 ()
+## Amon. CFMIP (P-1), CMIP5 (P-1), PMIP (P-1)
+#"UNKNOWN",       "ch4globalClim",          "ch4globalClim", "atmos_month",               "all",  .true.,  "none", 2
+
+## Fraction of Time Convection Occurs in Cell, 1 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP5 (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "moist",         "ci",                     "ci",            "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Percentage Cloud Cover, % (longitude,latitude,alevel): Priority 1,2
+## Amon. CFMIP (P-1), CMIP5 (P-1), HighResMIP (P-2), PMIP (P-1), VIACSAB (P-1)
+ "moist",         "cl",                     "cl",            "atmos_level_cmip",               "all",  .true.,  "none", 2
+
+## Mass Fraction of Cloud Ice, kg kg-1 (longitude,latitude,alevel)
+## Amon. CFMIP (P-1), CMIP5 (P-1), VIACSAB (P-1)
+ "moist",         "cli",                    "cli",           "atmos_level_cmip",               "all",  .true.,  "none", 2
+
+## Ice Water Path, kg m-2 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), ISMIP6 (P-1), PMIP (P-1)
+ "moist",         "clivi",                  "clivi",         "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Total Cloud Cover Percentage, % (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "moist",         "clt",                    "clt",           "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Mass Fraction of Cloud Liquid Water, kg kg-1 (longitude,latitude,alevel)
+## Amon. CFMIP (P-1), CMIP5 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "moist",         "clw",                    "clw",           "atmos_level_cmip",               "all",  .true.,  "none", 2
+
+## Condensed Water Path, kg m-2 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), ISMIP6 (P-1), PMIP (P-1)
+ "moist",         "clwvi",                  "clwvi",         "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Total Atmospheric Mass of CO2, kg ()
+## Amon. C4MIP (P-1), CFMIP (P-1), CMIP5 (P-1), PMIP (P-1)
+ "radiation",     "co2mass",                "co2mass",       "atmos_scalar",               "all",  .true.,  "none", 2
+
+## Total Atmospheric Mass of CO2, kg ()
+## Amon. CFMIP (P-1), CMIP5 (P-1), PMIP (P-1)
+#"UNKNOWN",       "co2massClim",            "co2massClim",   "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Evaporation, kg m-2 s-1 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "flux",          "evspsbl",                "evspsbl",       "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Surface Upward Latent Heat Flux, W m-2 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "flux",          "hfls",                   "hfls",          "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Surface Upward Sensible Heat Flux, W m-2 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "flux",          "hfss",                   "hfss",          "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Near-Surface Relative Humidity, % (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP5 (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "flux",          "hurs",                   "hurs",          "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Near-Surface Specific Humidity, 1 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP5 (P-1), DCPP (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "flux",          "huss",                   "huss",          "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Convective Mass Flux, kg m-2 s-1 (longitude,latitude,alevhalf)
+## Amon. CFMIP (P-1), CMIP5 (P-1), VIACSAB (P-1)
+ "moist",         "mc",                     "mc",            "atmos_level_cmip",               "all",  .true.,  "none", 2
+
+## Global Mean Mole Fraction of N2O, 1e-09 ()
+## Amon. CFMIP (P-1), CMIP5 (P-1), PMIP (P-1)
+ "radiation",     "n2oglobal",              "n2oglobal",     "atmos_scalar",               "all",  .true.,  "none", 2
+
+## Global Mean Mole Fraction of N2O, 1e-09 ()
+## Amon. CFMIP (P-1), CMIP5 (P-1), PMIP (P-1)
+#"UNKNOWN",       "n2oglobalClim",          "n2oglobalClim", "atmos_month",               "all",  .true.,  "none", 2
+
+## Pressure on Model Levels, Pa (longitude,latitude,alevel)
+## Amon. CFMIP (P-1), CMIP5 (P-1), VIACSAB (P-1)
+#"UNKNOWN",       "pfull",                  "pfull",         "atmos_month",               "all",  .true.,  "none", 2
+##. Pressure on Model Levels, Pa (longitude,latitude,alevel)
+ "phys",          "pfull",         "pfull",                  "atmos_level_cmip",        "all",  .true.,  "none", 2
+
+## Pressure on Model Half-Levels, Pa (longitude,latitude,alevhalf)
+## Amon. CFMIP (P-1), CMIP5 (P-1), VIACSAB (P-1)
+#"UNKNOWN",       "phalf",                  "phalf",         "atmos_month",               "all",  .true.,  "none", 2
+##. Pressure on Model Half-Levels, Pa (longitude,latitude,alevhalf)
+ "phys",          "phalf",         "phalf",                  "atmos_level_cmip",        "all",  .true.,  "none", 2
+
+## Precipitation, kg m-2 s-1 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-1), DynVar (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "moist",         "pr",                     "pr",            "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Convective Precipitation, kg m-2 s-1 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP5 (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "moist",         "prc",                    "prc",           "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Snowfall Flux, kg m-2 s-1 (longitude,latitude): Priority 1,3
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-3), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "moist",         "prsn",                   "prsn",          "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Water Vapor Path, kg m-2 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "moist",         "prw",                    "prw",           "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Surface Air Pressure, Pa (longitude,latitude): Priority 1,2
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-2), PMIP (P-1), VIACSAB (P-1)
+ "atmos",         "ps",                     "ps",            "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Sea Level Pressure, Pa (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-1), DynVar (P-1), PMIP (P-1), VIACSAB (P-1)
+ "flux",          "psl",                    "psl",           "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Surface Downwelling Longwave Radiation, W m-2 (longitude,latitude): Priority 1,3
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-3), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "radiation",     "rlds",                   "rlds",          "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Surface Downwelling Clear-Sky Longwave Radiation, W m-2 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "radiation",     "rldscs",                 "rldscs",        "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Surface Upwelling Longwave Radiation, W m-2 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP5 (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "radiation",     "rlus",                   "rlus",          "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## TOA Outgoing Longwave Radiation, W m-2 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "radiation",     "rlut",                   "rlut",          "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## TOA Outgoing Clear-sky Longwave Radiation, W m-2 (longitude,latitude): Priority 1,2
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-2), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "radiation",     "rlutcs",                 "rlutcs",        "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Surface Downwelling Shortwave Radiation, W m-2 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "radiation",     "rsds",                   "rsds",          "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Surface Downwelling Clear-Sky Shortwave Radiation, W m-2 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "radiation",     "rsdscs",                 "rsdscs",        "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## TOA Incident Shortwave Radiation, W m-2 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP5 (P-1), DCPP (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "radiation",     "rsdt",                   "rsdt",          "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Surface Upwelling Shortwave Radiation, W m-2 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP5 (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "radiation",     "rsus",                   "rsus",          "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Surface Upwelling Clear-Sky Shortwave Radiation, W m-2 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP5 (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "radiation",     "rsuscs",                 "rsuscs",        "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Top-of-Atmosphere Outgoing Shortwave Radiation, W m-2 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "radiation",     "rsut",                   "rsut",          "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## TOA Outgoing Clear-Sky Shortwave Radiation, W m-2 (longitude,latitude): Priority 1,2
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-2), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "radiation",     "rsutcs",                 "rsutcs",        "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Net Downward Radiative Flux at Top of Model, W m-2 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), ISMIP6 (P-1), PMIP (P-1)
+ "radiation",     "rtmt",                   "rtmt",          "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Fraction of Time Shallow Convection Occurs, 1 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP5 (P-1), ISMIP6 (P-1), VIACSAB (P-1)
+ "uw_conv",       "sci",                    "sci",           "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Near-Surface Wind Speed, m s-1 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP5 (P-1), DCPP (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "flux",          "sfcWind",                "sfcWind",       "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Near-Surface Air Temperature, K (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-1), DynVar (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "flux",          "tas",                    "tas",           "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Daily Maximum Near-Surface Air Temperature, K (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+#"UNKNOWN",       "tasmax",                 "tasmax",        "atmos_month_cmip",               "all",   .max.,  "none", 2
+
+## Daily Minimum Near-Surface Air Temperature, K (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+#"UNKNOWN",       "tasmin",                 "tasmin",        "atmos_month_cmip",               "all",   .min.,  "none", 2
+
+## Surface Downward Eastward Wind Stress, Pa (longitude,latitude): Priority 1,2
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-2), PMIP (P-1), VIACSAB (P-1)
+ "flux",          "tauu",                   "tauu",          "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Surface Downward Northward Wind Stress, Pa (longitude,latitude): Priority 1,2
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-2), PMIP (P-1), VIACSAB (P-1)
+ "flux",          "tauv",                   "tauv",          "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Surface Temperature, K (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "flux",          "ts",                     "ts",            "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Eastward Near-Surface Wind, m s-1 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP5 (P-1), DCPP (P-1), DynVar (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "flux",          "uas",                    "uas",           "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+## Northward Near-Surface Wind, m s-1 (longitude,latitude)
+## Amon. CFMIP (P-1), CMIP5 (P-1), DCPP (P-1), DynVar (P-1), ISMIP6 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "flux",          "vas",                    "vas",           "atmos_month_cmip",               "all",  .true.,  "none", 2
+
+
+####################
+# atmos_month_plev19
+####################
+
+## CH4 volume mixing ratio, mol mol-1 (longitude,latitude,plev19)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), PMIP (P-1)
+#"UNKNOWN_plev19", "ch4",                    "ch4_unmsk",     "atmos_month_plev19",        "all",  .true.,  "none", 2
+
+## CH4 volume mixing ratio, mol mol-1 (longitude,latitude,plev19)
+## Amon. CFMIP (P-1), CMIP5 (P-1), PMIP (P-1)
+#"UNKNOWN_plev19", "ch4Clim",                "ch4Clim_unmsk", "atmos_month_plev19",        "all",  .true.,  "none", 2
+
+## CO2 volume mixing ratio, mol mol-1 (longitude,latitude,plev19)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), PMIP (P-1)
+#"UNKNOWN_plev19", "co2",                    "co2_unmsk",     "atmos_month_plev19",        "all",  .true.,  "none", 2
+
+## CO2 volume mixing ratio, mol mol-1 (longitude,latitude,plev19)
+## Amon. CFMIP (P-1), CMIP5 (P-1), PMIP (P-1)
+#"UNKNOWN_plev19", "co2Clim",                "co2Clim_unmsk", "atmos_month_plev19",        "all",  .true.,  "none", 2
+
+## Relative Humidity, % (longitude,latitude,plev19)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), PMIP (P-1), VIACSAB (P-1)
+ "moist_plev19",  "hur",                    "hur_unmsk",     "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+## Specific Humidity, 1 (longitude,latitude,plev19): Priority 1,2
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-2), DynVar (P-1), PMIP (P-1), VIACSAB (P-1)
+ "atmos_plev19",  "hus",                    "hus_unmsk",     "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+## N2O volume mixing ratio, mol mol-1 (longitude,latitude,plev19)
+## Amon. CFMIP (P-1), CMIP5 (P-1), PMIP (P-1)
+#"UNKNOWN_plev19", "n2o",                    "n2o_unmsk",     "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+## N2O volume mixing ratio, mol mol-1 (longitude,latitude,plev19)
+## Amon. CFMIP (P-1), CMIP5 (P-1), PMIP (P-1)
+#"UNKNOWN_plev19", "n2oClim",                "n2oClim_unmsk", "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+## Ozone volume mixing ratio, mol mol-1 (longitude,latitude,plev19)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DAMIP (P-1)
+ "radiation_plev19", "o3",                     "o3_unmsk",      "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+## Ozone volume mixing ratio, mol mol-1 (longitude,latitude,plev19)
+## Amon. CFMIP (P-1), CMIP5 (P-1)
+#"UNKNOWN_plev19", "o3Clim",                 "o3Clim_unmsk",  "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+## Air Temperature, K (longitude,latitude,plev19)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-1), DynVar (P-1), PMIP (P-1), VIACSAB (P-1)
+ "atmos_plev19",  "ta",                     "ta_unmsk",      "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+## Eastward Wind, m s-1 (longitude,latitude,plev19)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-1), DynVar (P-1), PMIP (P-1), VIACSAB (P-1)
+ "atmos_plev19",  "ua",                     "ua_unmsk",      "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+## Northward Wind, m s-1 (longitude,latitude,plev19)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-1), DynVar (P-1), PMIP (P-1), VIACSAB (P-1)
+ "atmos_plev19",  "va",                     "va_unmsk",      "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+## omega (=dp/dt), Pa s-1 (longitude,latitude,plev19): Priority 1,2
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-2), DynVar (P-1), PMIP (P-1), VIACSAB (P-1)
+ "atmos_plev19",  "wap",                    "wap_unmsk",     "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+## Geopotential Height, m (longitude,latitude,plev19)
+## Amon. CFMIP (P-1), CMIP (P-1), CMIP5 (P-1), DCPP (P-1), DynVar (P-1), PMIP (P-1), VIACSAB (P-1)
+ "atmos_plev19",  "zg",                     "zg_unmsk",      "atmos_month_cmip",        "all",  .true.,  "none", 2
+
+

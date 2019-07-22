@@ -1,0 +1,162 @@
+#
+# diag table for monthly cosp output to be used in cfmip3
+#
+# this diag table only contains output variables for modis and calipso and 
+# does not include all possible output variables
+#
+# levi silvers
+#
+###################
+"atmos_month_cmip", 1, "months", 1, "days", "time",
+
+ "cmip",          "ap",            "ap",            "atmos_month_cmip",        "all",  .false., "none", 1
+ "cmip",          "b",             "b",             "atmos_month_cmip",        "all",  .false., "none", 1
+ "cmip",          "ap_bnds",       "ap_bnds",       "atmos_month_cmip",        "all",  .false., "none", 1
+ "cmip",          "b_bnds",        "b_bnds",        "atmos_month_cmip",        "all",  .false., "none", 1
+ "cmip",          "lev_bnds",      "lev_bnds",      "atmos_month_cmip",        "all",  .false., "none", 1
+#
+##############
+
+###################
+
+ "cloudrad",  "high_cld_amt",           "high_cld_amt",          "atmos_month_cmip", "all", .true.,  "none", 2
+ "cloudrad",  "low_cld_amt",            "low_cld_amt",           "atmos_month_cmip", "all", .true.,  "none", 2
+ "cloudrad",  "mid_cld_amt",            "mid_cld_amt",           "atmos_month_cmip", "all", .true.,  "none", 2
+ "cloudrad",  "tot_cld_amt",            "tot_cld_amt",           "atmos_month_cmip", "all", .true.,  "none", 2
+ "cosp", "u_wind", "u_wind", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "v_wind", "v_wind", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "ozone", "ozone", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "p", "p", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "z", "z", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "ph", "ph", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "zh", "zh", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "T", "T", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "sh", "sh", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "relhum", "relhum", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "tca", "tca", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "cca", "cca", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "lsliq", "lsliq", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "lsice", "lsice", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "ccliq", "ccliq", "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "ccice", "ccice", "atmos_month_cmip", "all", .true., "none", 2
+
+ "cosp", "cltlidarradar",  "cltlidarradar",  "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clcalipso2",     "clcalipso2",     "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clcalipso_mdl",  "clcalipso_mdl",  "atmos_month_cmip", "all", .true., "none", 2
+ "cosp", "clcalipso2_mdl", "clcalipso2_mdl", "atmos_month_cmip", "all", .true., "none", 2
+##93. CMOR variable cllcalipso
+ "cosp", "cllcalipso",     "cllcalipso",     "atmos_month_cmip", "all", .true., "none", 2
+##94. CMOR variable clmcalipso
+ "cosp", "clmcalipso",     "clmcalipso",     "atmos_month_cmip", "all", .true., "none", 2
+##95. CMOR variable clhcalipso
+ "cosp", "clhcalipso",     "clhcalipso",     "atmos_month_cmip", "all", .true., "none", 2
+
+# modis variables below
+"cosp", "tclmodis", "tclmodis", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "hicldmodis", "hicldmodis", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "mdcldmodis", "mdcldmodis", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "locldmodis", "locldmodis", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "lclmodis", "lclmodis", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "iclmodis", "iclmodis", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "ttaumodis", "ttaumodis", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "ltaumodis", "ltaumodis", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "itaumodis", "itaumodis", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "tlogtaumodis", "tlogtaumodis", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "llogtaumodis", "llogtaumodis", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "ilogtaumodis", "ilogtaumodis", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "lremodis", "lremodis", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "iremodis", "iremodis", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "ctpmodis", "ctpmodis", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "lwpmodis", "lwpmodis", "atmos_month_cmip", "all", .true., "none", 2
+"cosp", "iwpmodis", "iwpmodis", "atmos_month_cmip", "all", .true., "none", 2
+
+# "cosp", "calipsosrcfad_1", "srcfad_1", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_2", "srcfad_2", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_3", "srcfad_3", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_4", "srcfad_4", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_5", "srcfad_5", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_6", "srcfad_6", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_7", "srcfad_7", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_8", "srcfad_8", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_9", "srcfad_9", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_10", "srcfad_10", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_11", "srcfad_11", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_12", "srcfad_12", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_13", "srcfad_13", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_14", "srcfad_14", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_15", "srcfad_15", "atmos_month_cmip", "all", .true., "none", 2
+#
+# "cosp", "calipsosrcfad_mdl_1", "srcfad_mdl_1", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_mdl_2", "srcfad_mdl_2", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_mdl_3", "srcfad_mdl_3", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_mdl_4", "srcfad_mdl_4", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_mdl_5", "srcfad_mdl_5", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_mdl_6", "srcfad_mdl_6", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_mdl_7", "srcfad_mdl_7", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_mdl_8", "srcfad_mdl_8", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_mdl_9", "srcfad_mdl_9", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_mdl_10", "srcfad_mdl_10", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_mdl_11", "srcfad_mdl_11", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_mdl_12", "srcfad_mdl_12", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_mdl_13", "srcfad_mdl_13", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_mdl_14", "srcfad_mdl_14", "atmos_month_cmip", "all", .true., "none", 2
+# "cosp", "calipsosrcfad_mdl_15", "srcfad_mdl_15", "atmos_month_cmip", "all", .true., "none", 2
+
+##
+#"cosp", "tauctpmodis_1", "tauctpmodis_1", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_2", "tauctpmodis_2", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_3", "tauctpmodis_3", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_4", "tauctpmodis_4", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_5", "tauctpmodis_5", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_6", "tauctpmodis_6", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_7", "tauctpmodis_7", "atmos_month_cmip", "all", .true., "none", 2
+## 
+#"cosp", "tauctpmodis_7_1", "tauctpmodis_7_1", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_2_1", "tauctpmodis_2_1", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_3_1", "tauctpmodis_3_1", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_4_1", "tauctpmodis_4_1", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_5_1", "tauctpmodis_5_1", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_6_1", "tauctpmodis_6_1", "atmos_month_cmip", "all", .true., "none", 2
+##
+#"cosp", "tauctpmodis_7_2", "tauctpmodis_7_2", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_2_2", "tauctpmodis_2_2", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_3_2", "tauctpmodis_3_2", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_4_2", "tauctpmodis_4_2", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_5_2", "tauctpmodis_5_2", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_6_2", "tauctpmodis_6_2", "atmos_month_cmip", "all", .true., "none", 2
+##
+#"cosp", "tauctpmodis_7_3", "tauctpmodis_7_3", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_2_3", "tauctpmodis_2_3", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_3_3", "tauctpmodis_3_3", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_4_3", "tauctpmodis_4_3", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_5_3", "tauctpmodis_5_3", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_6_3", "tauctpmodis_6_3", "atmos_month_cmip", "all", .true., "none", 2
+##
+#"cosp", "tauctpmodis_7_4", "tauctpmodis_7_4", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_2_4", "tauctpmodis_2_4", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_3_4", "tauctpmodis_3_4", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_4_4", "tauctpmodis_4_4", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_5_4", "tauctpmodis_5_4", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_6_4", "tauctpmodis_6_4", "atmos_month_cmip", "all", .true., "none", 2
+##
+#"cosp", "tauctpmodis_7_5", "tauctpmodis_7_5", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_2_5", "tauctpmodis_2_5", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_3_5", "tauctpmodis_3_5", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_4_5", "tauctpmodis_4_5", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_5_5", "tauctpmodis_5_5", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_6_5", "tauctpmodis_6_5", "atmos_month_cmip", "all", .true., "none", 2
+##
+#"cosp", "tauctpmodis_7_6", "tauctpmodis_7_6", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_2_6", "tauctpmodis_2_6", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_3_6", "tauctpmodis_3_6", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_4_6", "tauctpmodis_4_6", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_5_6", "tauctpmodis_5_6", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_6_6", "tauctpmodis_6_6", "atmos_month_cmip", "all", .true., "none", 2
+##
+#"cosp", "tauctpmodis_7_7", "tauctpmodis_7_7", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_2_7", "tauctpmodis_2_7", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_3_7", "tauctpmodis_3_7", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_4_7", "tauctpmodis_4_7", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_5_7", "tauctpmodis_5_7", "atmos_month_cmip", "all", .true., "none", 2
+#"cosp", "tauctpmodis_6_7", "tauctpmodis_6_7", "atmos_month_cosp", "all", .true., "none", 2
+

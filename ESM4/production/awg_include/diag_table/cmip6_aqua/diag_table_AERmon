@@ -1,0 +1,68 @@
+####################
+# Table: AERmon
+# Version: 1.00.15
+####################
+
+ "aerosol_month_cmip",       1, "months",    1,  "days",  "time",
+
+####################
+
+##. Auxiliary fields required for model level output
+ "cmip",          "ap",            "ap",            "aerosol_month_cmip",      "all",  .false., "none", 1
+ "cmip",          "b",             "b",             "aerosol_month_cmip",      "all",  .false., "none", 1
+ "cmip",          "ap_bnds",       "ap_bnds",       "aerosol_month_cmip",      "all",  .false., "none", 1
+ "cmip",          "b_bnds",        "b_bnds",        "aerosol_month_cmip",      "all",  .false., "none", 1
+ "cmip",          "lev_bnds",      "lev_bnds",      "aerosol_month_cmip",      "all",  .false., "none", 1
+ "cmip",          "ap_half",       "ap_half",       "aerosol_month_cmip",      "all",  .false., "none", 1
+ "cmip",          "b_half",        "b_half",        "aerosol_month_cmip",      "all",  .false., "none", 1
+
+##. Ambient Aerosol Absorption Optical Thickness at 550 nm, 1.0 (longitude,latitude,time)
+ "radiation",     "abs550aer",     "abs550aer",     "aerosol_month_cmip",      "all",  .true.,  "none", 2
+
+##. Cloud Droplet Number Concentration, m-3 (longitude,latitude,alevel,time)
+ "strat",         "cdnc",          "cdnc",          "aerosol_month_cmip",      "all",  .true.,  "none", 2
+
+##. Convective Cloud Cover Percentage, % (longitude,latitude,time)
+ "uw_conv",       "cltc_uw",       "cltc",          "aerosol_month_cmip",      "all",  .true.,  "none", 2
+
+##. DMS volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+ "tracers",       "dms_mol_mol",   "dms",           "aerosol_month_cmip",      "all",  .true.,  "none", 2
+
+##. liquid water path, kg m-2 (longitude,latitude,time)
+ "moist",         "lwp",           "lwp",           "aerosol_month_cmip",      "all",  .true.,  "none", 2
+
+##. Elemental carbon mass mixing ratio, kg kg-1 (longitude,latitude,alevel,time)
+ "tracers",       "fam_bc_kg_kg",  "mmrbc",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+
+##. Dust aerosol mass mixing ratio, kg kg-1 (longitude,latitude,alevel,time)
+ "tracers",       "fam_dust_kg_kg","mmrdust",       "aerosol_month_cmip",      "all",  .true.,  "none", 2
+
+##. NH4 mass mixing ratio, kg kg-1 (longitude,latitude,alevel,time)
+ "tracers",       "nh4_kg_kg",     "mmrnh4",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+
+##. NO3 aerosol mass mixing ratio, kg kg-1 (longitude,latitude,alevel,time)
+ "tracers",       "nh4no3_kg_kg",  "mmrno3",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+
+##. Total organic aerosol mass mixing ratio, kg kg-1 (longitude,latitude,alevel,time)
+ "tracers",       "fam_om_kg_kg",  "mmroa",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+
+##. Aerosol sulfate mass mixing ratio, kg kg-1 (longitude,latitude,alevel,time)
+ "tracers",       "so4_kg_kg",     "mmrso4",        "aerosol_month_cmip",      "all",  .true.,  "none", 2
+
+##. Sea Salt mass mixing ratio, kg kg-1 (longitude,latitude,alevel,time)
+ "tracers",       "fam_seasalt_kg_kg", "mmrss",     "aerosol_month_cmip",      "all",  .true.,  "none", 2
+
+##. ambient aerosol optical thickness at 550 nm, 1.0 (longitude,latitude,time)
+ "radiation",     "od550aer",      "od550aer",      "aerosol_month_cmip",      "all",  .true.,  "none", 2
+
+###. ambient fine aerosol optical thickness at 550 nm, 1.0 (longitude,latitude,time)
+ "radiation",     "od550lt1aer",   "od550lt1aer",   "aerosol_month_cmip",      "all",  .true.,  "none", 2
+#
+###. SO2 volume mixing ratio, mol mol-1 (longitude,latitude,alevel,time)
+ "tracers",       "so2_mol_mol",   "so2",           "aerosol_month_cmip",      "all",  .true.,  "none", 2
+#
+###. tendency_of_air_temperature_due_to_longwave_heating, K s-1 (longitude,latitude,alevel,time)
+ "radiation",     "tntrl",         "tntrl",         "aerosol_month_cmip",      "all",  .true.,  "none", 2
+#
+###. tendency_of_air_temperature_due_to_shortwave_heating, K s-1 (longitude,latitude,alevel,time)
+ "radiation",     "tntrs",         "tntrs",         "aerosol_month_cmip",      "all",  .true.,  "none", 2

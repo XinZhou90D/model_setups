@@ -1,0 +1,62 @@
+prologue.user pp301 oar.gfdl.cmip6
+Thu Apr  4 09:31:44 EDT 2019
+/bin/rm -rf /vftmp/oar.gfdl.cmip6/pbs20650449
+/bin/mkdir -p /vftmp/oar.gfdl.cmip6/pbs20650449
+#####################################################################
+dynvar_driver_p39.csh.0171-0175.printout
+#####################################################################
+Warning: no access to tty (Bad file descriptor).
+Thus no job control in this shell.
+epilogue.user pp301 oar.gfdl.cmip6
+Thu Apr  4 09:31:44 EDT 2019
+/bin/rm -r /vftmp/oar.gfdl.cmip6/pbs20650449
+#####################################################################
+dynvar_driver_p39.csh.0171-0175.printout
+#####################################################################
+Resources requested: neednodes=1:ppn=1,nodes=1:ppn=1,walltime=01:00:00
+Resources used:      cput=00:00:00,energy_used=0,mem=0kb,vmem=0kb,walltime=00:00:00
+
+job gfdl.20030689 (RM job '20650449.moab01.princeton.rdhpcs.noaa.gov')
+
+AName: dynvar_driver_p39.csh.0171-0175.printout
+State: Canceling 
+Creds:  user:oar.gfdl.cmip6  group:a  account:gfdl_a  class:batch  qos:windfall
+WallTime:   00:00:00 of 1:00:00
+SubmitTime: Thu Apr  4 13:31:26
+  (Time Queued  Total: 00:00:18  Eligible: 00:00:00)
+
+StartTime: Thu Apr  4 13:31:44
+TemplateSets:  DEFAULT
+Total Requested Tasks: 1
+Total Requested Nodes: 1
+
+Req[0]  TaskCount: 1  Partition: p-006
+NodeCount:  1
+
+Allocated Nodes:
+[pp301.princeton.rdhp:1]
+
+
+SystemID:   gfdl
+SystemJID:  gfdl.20030689
+Task Distribution: pp301.princeton.rdhp
+IWD:            $HOME/ncrc/xml/ESM4/production
+SubmitDir:      $HOME/ncrc/xml/ESM4/production
+UMask:          0022 
+Executable:     /opt/moab/spool/moab.job.xaLZT5
+
+StartCount:     1
+User Specified Partition List:   p-006
+Partition List: p-006
+SrcRM:          internal  DstRM: p-006  DstRMJID: 20650449.moab01.princeton.rdhpcs.noaa.gov
+Flags:          GLOBALQUEUE
+StartPriority:  0
+IterationJobRank: 0
+NOTE:  Using Fallback QOS
+PE:             1.00
+Reservation 'gfdl.20030689' (00:00:00 -> 1:00:00  Duration: 1:00:00)
+
+EndTime: Thu Apr  4 13:31:45 (Thu Apr  4 09:31:45 EDT 2019)
+Job Exit Code: 143 (terminated by PBS)
+#####################################################################
+epilogue pp301 root

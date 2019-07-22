@@ -1,0 +1,360 @@
+###################
+# Table: CFday
+# Version: 1.00.15
+###################
+
+ "atmos_level_daily_cmip",        24, "hours",    1,  "days",  "time",
+
+##. Auxiliary fields required for model level output
+ "cmip",          "lev_bnds",      "lev_bnds",      "atmos_level_daily_cmip",        "all",  .false., "none", 1
+ "cmip",          "ap",            "ap",            "atmos_level_daily_cmip",        "all",  .false., "none", 1
+ "cmip",          "b",             "b",             "atmos_level_daily_cmip",        "all",  .false., "none", 1
+ "cmip",          "ap_bnds",       "ap_bnds",       "atmos_level_daily_cmip",        "all",  .false., "none", 1
+ "cmip",          "b_bnds",        "b_bnds",        "atmos_level_daily_cmip",        "all",  .false., "none", 1
+ "cmip",          "ap_half",       "ap_half",       "atmos_level_daily_cmip",        "all",  .false., "none", 1
+ "cmip",          "b_half",        "b_half",        "atmos_level_daily_cmip",        "all",  .false., "none", 1 
+
+ "atmos",         "p700",          "p700",          "atmos_daily_cmip",              "all",  .false., "none", 1
+
+###################
+
+##. Surface Air Pressure, Pa (longitude,latitude,time)
+ "atmos",         "ps",            "ps",            "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+
+##. TOA Incident Shortwave Radiation, W m-2 (longitude,latitude,time)
+ "radiation",     "rsdt",          "rsdt",          "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##. Top-of-Atmosphere Outgoing Shortwave Radiation, W m-2 (longitude,latitude,time)
+ "radiation",     "rsut",          "rsut",          "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##. Surface Downwelling Clear-Sky Shortwave Radiation, W m-2 (longitude,latitude,time)
+ "radiation",     "rsdscs",        "rsdscs",        "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##. Surface Upwelling Clear-Sky Shortwave Radiation, W m-2 (longitude,latitude,time)
+ "radiation",     "rsuscs",        "rsuscs",        "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##. Surface Downwelling Clear-Sky Longwave Radiation, W m-2 (longitude,latitude,time)
+ "radiation",     "rldscs",        "rldscs",        "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##. TOA Outgoing Clear-sky Longwave Radiation, W m-2 (longitude,latitude,time)
+ "radiation",     "rlutcs",        "rlutcs",        "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##. TOA Outgoing Clear-Sky Shortwave Radiation, W m-2 (longitude,latitude,time)
+ "radiation",     "rsutcs",        "rsutcs",        "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##. Condensed Water Path, kg m-2 (longitude,latitude,time)
+ "moist",         "clwvi",         "clwvi",         "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##. Ice Water Path, kg m-2 (longitude,latitude,time)
+ "moist",         "clivi",         "clivi",         "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##. omega (=dp/dt), Pa s-1 (longitude,latitude,time,p500)
+ "atmos",         "wap500",        "wap500",        "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##. Air Temperature, K (longitude,latitude,time,p700)
+ "atmos",         "ta700",         "ta700_unmsk",   "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##. Air Pressure at Convective Cloud Base, Pa (longitude,latitude,time)
+ "moist",         "ccb",           "ccb",           "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##. Air Pressure at Convective Cloud Top, Pa (longitude,latitude,time)
+ "moist",         "cct",           "cct",           "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##. ISCCP Total Cloud Cover Percentage, % (longitude,latitude,time)
+ "cosp",       "tclisccp",         "cltisccp",      "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##. ISCCP Mean Cloud Albedo, 1.0 (longitude,latitude,time)
+ "cosp",          "albisccp",      "albisccp",      "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##. ISCCP Mean Cloud Top Pressure, Pa (longitude,latitude,time)
+ "cosp",          "ctpisccp",      "pctisccp",     "atmos_daily_cmip",         "all",  .true.,  "none", 2
+
+
+##. CALIPSO Total Cloud Cover Percentage, % (longitude,latitude,time)
+ "cosp",          "cltcalipso",    "cltcalipso",    "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##. CALIPSO Low Level Cloud Cover Percentage, % (longitude,latitude,time,p840)
+ "cosp",          "cllcalipso",    "cllcalipso",    "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##. CALIPSO Mid Level Cloud Percentage, % (longitude,latitude,time,p560)
+ "cosp",          "clmcalipso",    "clmcalipso",    "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##. CALIPSO High Level Cloud Area Percentage, % (longitude,latitude,time,p220)
+ "cosp",          "clhcalipso",    "clhcalipso",    "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+###. Eastward Wind, m s-1 (longitude,latitude,alevel,time)
+# "atmos",         "ua",            "ua",            "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+#
+###. Northward Wind, m s-1 (longitude,latitude,alevel,time)
+# "atmos",         "va",            "va",            "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+#
+###. Air Temperature, K (longitude,latitude,alevel,time)
+# "atmos",         "ta",            "ta",            "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+#
+###. Specific Humidity, 1.0 (longitude,latitude,alevel,time)
+# "atmos",         "hus",           "hus",           "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+#
+###. omega (=dp/dt), Pa s-1 (longitude,latitude,alevel,time)
+# "atmos",         "wap",           "wap",           "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+#
+###. Geopotential Height, m (longitude,latitude,alevel,time)
+# "phys",          "zg",            "zg",            "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+#
+###. Relative Humidity, % (longitude,latitude,alevel,time)
+# "moist",         "hur",           "hur",           "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+
+##. Percentage Cloud Cover, % (longitude,latitude,alevel,time)
+ "moist",         "cl",            "cl",            "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+
+##. Mass Fraction of Cloud Liquid Water, kg kg-1 (longitude,latitude,alevel,time)
+# "moist",         "clw",           "clw",           "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+
+##. Mass Fraction of Cloud Ice, kg kg-1 (longitude,latitude,alevel,time)
+# "moist",         "cli",           "cli",           "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+
+##. Convective Mass Flux, kg m-2 s-1 (longitude,latitude,alevhalf,time)
+# "moist",         "mc",            "mc",            "atmos_level_daily_cmip",        "all",  .true.,  "none", 2
+
+##. CALIPSO Percentage Cloud Cover, % (longitude,latitude,alt40,time)
+#"cosp",       "clcalipso",         "clcalipso",     "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##. ISCCP Cloud Area Fraction, % (longitude,latitude,plev7c,tau,time)
+# "UNKNOWN",       "clisccp",       "clisccp",       "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##. Pressure on Model Levels, Pa (longitude,latitude,alevel,time)
+# "phys",          "pfull",         "pfull",         "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##. Pressure on Model Half-Levels, Pa (longitude,latitude,alevhalf,time)
+# "phys",          "phalf",         "phalf",         "atmos_daily_cmip",        "all",  .true.,  "none", 2
+
+##############
+## atmos_daily_cosp
+##############
+## REALMS:   atmos                               GROUPS: AERday, CFday, Eday, day
+## FREQS:    day                                 MIPS:   AerChemMIP, CFMIP, CMIP, CMIP5, CORDEX, DAMIP, DCPP, DynVar, GeoMIP, HighResMIP, LS3MIP, LUMIP, PMIP, RFMIP, VIACSAB, VolMIP
+## PRIORITY: 1, 2, 3                            
+## Fields:   83
+#
+### Cloud Droplet Number Concentration of Convective Cloud Tops, m-3 (longitude,latitude)
+### Eday. CFMIP (P-1)
+##"UNKNOWN",       "ccldncl",                "ccldncl",       "atmos_daily",               "all",  .true.,  "none", 2
+#
+### Ice Crystal Number Concentration of Cloud Tops, m-3 (longitude,latitude)
+### Eday. CFMIP (P-1)
+##"UNKNOWN",       "cldnci",                 "cldnci",        "atmos_daily",               "all",  .true.,  "none", 2
+#
+### Column Integrated Cloud Droplet Number, m-2 (longitude,latitude)
+### Eday. CFMIP (P-1)
+# "cloudrad",      "cldnvi",                 "cldnvi",        "atmos_daily",               "all",  .true.,  "none", 2
+#
+### Convective Ice Water Path, kg m-2 (longitude,latitude)
+### Eday. CFMIP (P-1)
+##"UNKNOWN",       "clivic",                 "clivic",        "atmos_daily",               "all",  .true.,  "none", 2
+#
+### PARASOL Reflectance, 1.0 (longitude,latitude)
+### Eday. CFMIP (P-1)
+#"cosp",       "parasol_refl",            "parasolRefl",   "atmos_daily_cmip",               "all",  .true.,  "none", 2
+#
+####################
+## atmos_daily_plev7
+####################
+## REALMS:   atmos                               GROUPS: CFday, Eday
+## FREQS:    day                                 MIPS:   CFMIP, CMIP5
+## PRIORITY: 1                                  
+## Fields:   3
+#
+### ISCCP Cloud Area Fraction, % (longitude,latitude,plev7c)
+### CFday. CFMIP (P-1), CMIP5 (P-1)
+##"UNKNOWN_plev7", "clisccp",                "clisccp_unmsk", "atmos_daily_plev7",         "all",  .true.,  "none", 2
+# "cosp", "clisccp_1_1", "clisccp_1_1", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_2_1", "clisccp_2_1", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_3_1", "clisccp_3_1", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_4_1", "clisccp_4_1", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_5_1", "clisccp_5_1", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_6_1", "clisccp_6_1", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_7_1", "clisccp_7_1", "atmos_daily_cmip", "all", .true., "none", 2
+#
+# "cosp", "clisccp_1_2", "clisccp_1_2", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_2_2", "clisccp_2_2", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_3_2", "clisccp_3_2", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_4_2", "clisccp_4_2", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_5_2", "clisccp_5_2", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_6_2", "clisccp_6_2", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_7_2", "clisccp_7_2", "atmos_daily_cmip", "all", .true., "none", 2
+#
+# "cosp", "clisccp_1_3", "clisccp_1_3", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_2_3", "clisccp_2_3", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_3_3", "clisccp_3_3", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_4_3", "clisccp_4_3", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_5_3", "clisccp_5_3", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_6_3", "clisccp_6_3", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_7_3", "clisccp_7_3", "atmos_daily_cmip", "all", .true., "none", 2
+#
+# "cosp", "clisccp_1_4", "clisccp_1_4", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_2_4", "clisccp_2_4", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_3_4", "clisccp_3_4", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_4_4", "clisccp_4_4", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_5_4", "clisccp_5_4", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_6_4", "clisccp_6_4", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_7_4", "clisccp_7_4", "atmos_daily_cmip", "all", .true., "none", 2
+#
+# "cosp", "clisccp_1_5", "clisccp_1_5", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_2_5", "clisccp_2_5", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_3_5", "clisccp_3_5", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_4_5", "clisccp_4_5", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_5_5", "clisccp_5_5", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_6_5", "clisccp_6_5", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_7_5", "clisccp_7_5", "atmos_daily_cmip", "all", .true., "none", 2
+#
+# "cosp", "clisccp_1_6", "clisccp_1_6", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_2_6", "clisccp_2_6", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_3_6", "clisccp_3_6", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_4_6", "clisccp_4_6", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_5_6", "clisccp_5_6", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_6_6", "clisccp_6_6", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_7_6", "clisccp_7_6", "atmos_daily_cmip", "all", .true., "none", 2
+#
+# "cosp", "clisccp_1_7", "clisccp_1_7", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_2_7", "clisccp_2_7", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_3_7", "clisccp_3_7", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_4_7", "clisccp_4_7", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_5_7", "clisccp_5_7", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_6_7", "clisccp_6_7", "atmos_daily_cmip", "all", .true., "none", 2
+# "cosp", "clisccp_7_7", "clisccp_7_7", "atmos_daily_cmip", "all", .true., "none", 2
+#
+##
+##
+#### MODIS Optical Thickness-Particle Size joint  distribution, liquid, % (longitude,latitude,plev7c)
+#### Eday. CFMIP (P-1)
+##
+#### MODIS Optical Thickness-Particle Size joint  distribution, ice, % (longitude,latitude,plev7c)
+## asked for as part of variable group CFMIP-cfDayExtra
+###"UNKNOWN_plev7", "jpdftaureicemodis",      "jpdftaureicemodis_unmsk", "atmos_month_plev7",         "all",  .true.,  "none", 2
+#"cosp", "taurefficemodis_1_1",   "jpdftaureicemodis_1_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_2_1",   "jpdftaureicemodis_2_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_3_1",   "jpdftaureicemodis_3_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_4_1",   "jpdftaureicemodis_4_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_5_1",   "jpdftaureicemodis_5_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_6_1",   "jpdftaureicemodis_6_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_7_1",   "jpdftaureicemodis_7_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#
+#"cosp", "taurefficemodis_1_2",   "jpdftaureicemodis_1_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_2_2",   "jpdftaureicemodis_2_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_3_2",   "jpdftaureicemodis_3_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_4_2",   "jpdftaureicemodis_4_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_5_2",   "jpdftaureicemodis_5_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_6_2",   "jpdftaureicemodis_6_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_7_2",   "jpdftaureicemodis_7_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#
+#"cosp", "taurefficemodis_1_3",   "jpdftaureicemodis_1_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_2_3",   "jpdftaureicemodis_2_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_3_3",   "jpdftaureicemodis_3_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_4_3",   "jpdftaureicemodis_4_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_5_3",   "jpdftaureicemodis_5_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_6_3",   "jpdftaureicemodis_6_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_7_3",   "jpdftaureicemodis_7_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#
+#"cosp", "taurefficemodis_1_4",   "jpdftaureicemodis_1_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_2_4",   "jpdftaureicemodis_2_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_3_4",   "jpdftaureicemodis_3_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_4_4",   "jpdftaureicemodis_4_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_5_4",   "jpdftaureicemodis_5_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_6_4",   "jpdftaureicemodis_6_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_7_4",   "jpdftaureicemodis_7_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#
+#"cosp", "taurefficemodis_1_5",   "jpdftaureicemodis_1_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_2_5",   "jpdftaureicemodis_2_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_3_5",   "jpdftaureicemodis_3_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_4_5",   "jpdftaureicemodis_4_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_5_5",   "jpdftaureicemodis_5_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_6_5",   "jpdftaureicemodis_6_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_7_5",   "jpdftaureicemodis_7_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#
+#"cosp", "taurefficemodis_1_6",   "jpdftaureicemodis_1_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_2_6",   "jpdftaureicemodis_2_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_3_6",   "jpdftaureicemodis_3_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_4_6",   "jpdftaureicemodis_4_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_5_6",   "jpdftaureicemodis_5_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_6_6",   "jpdftaureicemodis_6_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_7_6",   "jpdftaureicemodis_7_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#
+#"cosp", "taurefficemodis_1_7",   "jpdftaureicemodis_1_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_2_7",   "jpdftaureicemodis_2_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_3_7",   "jpdftaureicemodis_3_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_4_7",   "jpdftaureicemodis_4_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_5_7",   "jpdftaureicemodis_5_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_6_7",   "jpdftaureicemodis_6_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taurefficemodis_7_7",   "jpdftaureicemodis_7_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#
+###"UNKNOWN_plev7", "jpdftaureliqmodis",      "jpdftaureliqmodis_unmsk", "atmos_daily_plev7",         "all",  .true.,  "none", 2
+#
+#"cosp", "taureffliqmodis_1_1",   "jpdftaureliqmodis_1_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_2_1",   "jpdftaureliqmodis_2_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_3_1",   "jpdftaureliqmodis_3_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_4_1",   "jpdftaureliqmodis_4_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_5_1",   "jpdftaureliqmodis_5_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_6_1",   "jpdftaureliqmodis_6_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_7_1",   "jpdftaureliqmodis_7_1",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#
+#"cosp", "taureffliqmodis_1_2",   "jpdftaureliqmodis_1_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_2_2",   "jpdftaureliqmodis_2_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_3_2",   "jpdftaureliqmodis_3_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_4_2",   "jpdftaureliqmodis_4_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_5_2",   "jpdftaureliqmodis_5_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_6_2",   "jpdftaureliqmodis_6_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_7_2",   "jpdftaureliqmodis_7_2",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#
+#"cosp", "taureffliqmodis_1_3",   "jpdftaureliqmodis_1_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_2_3",   "jpdftaureliqmodis_2_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_3_3",   "jpdftaureliqmodis_3_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_4_3",   "jpdftaureliqmodis_4_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_5_3",   "jpdftaureliqmodis_5_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_6_3",   "jpdftaureliqmodis_6_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_7_3",   "jpdftaureliqmodis_7_3",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#
+#"cosp", "taureffliqmodis_1_4",   "jpdftaureliqmodis_1_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_2_4",   "jpdftaureliqmodis_2_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_3_4",   "jpdftaureliqmodis_3_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_4_4",   "jpdftaureliqmodis_4_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_5_4",   "jpdftaureliqmodis_5_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_6_4",   "jpdftaureliqmodis_6_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_7_4",   "jpdftaureliqmodis_7_4",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#
+#"cosp", "taureffliqmodis_1_5",   "jpdftaureliqmodis_1_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_2_5",   "jpdftaureliqmodis_2_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_3_5",   "jpdftaureliqmodis_3_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_4_5",   "jpdftaureliqmodis_4_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_5_5",   "jpdftaureliqmodis_5_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_6_5",   "jpdftaureliqmodis_6_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_7_5",   "jpdftaureliqmodis_7_5",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#
+#"cosp", "taureffliqmodis_1_6",   "jpdftaureliqmodis_1_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_2_6",   "jpdftaureliqmodis_2_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_3_6",   "jpdftaureliqmodis_3_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_4_6",   "jpdftaureliqmodis_4_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_5_6",   "jpdftaureliqmodis_5_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_6_6",   "jpdftaureliqmodis_6_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_7_6",   "jpdftaureliqmodis_7_6",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#
+#"cosp", "taureffliqmodis_1_7",   "jpdftaureliqmodis_1_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_2_7",   "jpdftaureliqmodis_2_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_3_7",   "jpdftaureliqmodis_3_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_4_7",   "jpdftaureliqmodis_4_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_5_7",   "jpdftaureliqmodis_5_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_6_7",   "jpdftaureliqmodis_6_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+#"cosp", "taureffliqmodis_7_7",   "jpdftaureliqmodis_7_7",               "atmos_daily_cmip",         "all",  .true.,   "none", 2
+
+### MODIS Ice Cloud Area Percentage, % (longitude,latitude)
+### Emon. CFMIP (P-1)
+#"cosp",       "iclmodis",               "climodis",      "atmos_daily_cmip",               "all",  .true.,  "none", 2
+##. MODIS Liquid Cloud Fraction, % (longitude,latitude,time)
+#"cosp",       "lclmodis",               "clwmodis",      "atmos_daily_cmip",               "all",  .true.,  "none", 2
+#
+#### CALIPSO ice and liquid on tempsurfaces, % (longitude,latitude,tmpindex)
+## does not appear to be part of the data request
+#"cosp",       "clcalipsotmp",           "clcalipsotmp",  "atmos_level_daily_cmip",               "all",  .true.,  "none", 2
+#"cosp",       "clcalipsotmpice",        "clcalipsotmpice",  "atmos_level_daily_cmip",               "all",  .true.,  "none", 2
+#"cosp",       "clcalipsotmpliq",        "clcalipsotmpliq",  "atmos_level_daily_cmip",               "all",  .true.,  "none", 2
+#"cosp",       "clcalipsotmpun",         "clcalipsotmpun",  "atmos_level_daily_cmip",               "all",  .true.,  "none", 2
+##
+

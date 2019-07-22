@@ -1,0 +1,178 @@
+############
+# Table: day
+############
+
+"atmos_daily",                1, "days",      1,  "days",   "time"
+"atmos_daily_cmip",          24, "hours",     1,  "days",   "time",
+"land_daily",                 1, "days",      1,  "days",   "time"
+
+# #############
+##. auxiliary variables
+# #############
+
+ "cmip",          "ap",            "ap",            "atmos_daily_cmip",        "all",  .false., "none", 1
+ "cmip",          "b",             "b",             "atmos_daily_cmip",        "all",  .false., "none", 1
+ "cmip",          "ap_bnds",       "ap_bnds",       "atmos_daily_cmip",        "all",  .false., "none", 1
+ "cmip",          "b_bnds",        "b_bnds",        "atmos_daily_cmip",        "all",  .false., "none", 1
+ "cmip",          "lev_bnds",      "lev_bnds",      "atmos_daily_cmip",        "all",  .false., "none", 1
+
+
+#############
+# atmos_daily
+#############
+
+## Total Cloud Cover Percentage, % (longitude,latitude): Priority 1,2
+## day. CMIP5 (P-1), CORDEX (P-1), DCPP (P-2), VIACSAB (P-1)
+ "moist",         "clt",                    "clt",           "atmos_daily_cmip",               "all",  .true.,  "none", 2
+
+## Surface Upward Latent Heat Flux, W m-2 (longitude,latitude): Priority 1,3
+## day. CMIP5 (P-1), DCPP (P-3), LUMIP (P-1), VIACSAB (P-1)
+ "flux",          "hfls",                   "hfls",          "atmos_daily_cmip",               "all",  .true.,  "none", 2
+
+## Surface Upward Sensible Heat Flux, W m-2 (longitude,latitude): Priority 1,3
+## day. CMIP5 (P-1), DCPP (P-3), LUMIP (P-1), VIACSAB (P-1)
+ "flux",          "hfss",                   "hfss",          "atmos_daily_cmip",               "all",  .true.,  "none", 2
+
+## Near-Surface Relative Humidity, % (longitude,latitude)
+## day. CMIP5 (P-1), CORDEX (P-1), LS3MIP (P-1), PMIP (P-1), VIACSAB (P-1)
+ "flux",          "hurs",                   "hurs",          "atmos_daily_cmip",               "all",  .true.,  "none", 2
+
+## Daily Maximum Near-Surface Relative Humidity, % (longitude,latitude)
+## day. CMIP5 (P-1), LS3MIP (P-1), PMIP (P-1), VIACSAB (P-1)
+"flux",       "hursmax",                "hursmax",       "atmos_daily_cmip",                    "all",   .true.,  "none", 2
+
+## Daily Minimum Near-Surface Relative Humidity, % (longitude,latitude)
+## day. CMIP5 (P-1), LS3MIP (P-1), PMIP (P-1), VIACSAB (P-1)
+"flux",       "hursmin",                "hursmin",       "atmos_daily_cmip",                    "all",   .true.,  "none", 2
+
+## Near-Surface Specific Humidity, 1 (longitude,latitude)
+## day. CMIP5 (P-1), CORDEX (P-1), RFMIP (P-1), VIACSAB (P-1)
+ "flux",          "huss",                   "huss",          "atmos_daily_cmip",               "all",  .true.,  "none", 2
+
+## Precipitation, kg m-2 s-1 (longitude,latitude)
+## day. CMIP (P-1), CMIP5 (P-1), CORDEX (P-1), DCPP (P-1), DynVar (P-1), GeoMIP (P-1), LS3MIP (P-1), LUMIP (P-1), PMIP (P-1), RFMIP (P-1), VIACSAB (P-1)
+ "moist",         "pr",                     "pr",            "atmos_daily_cmip",               "all",  .true.,  "none", 2
+
+## Convective Precipitation, kg m-2 s-1 (longitude,latitude)
+## day. CMIP5 (P-1), GeoMIP (P-1), VIACSAB (P-1)
+ "moist",         "prc",                    "prc",           "atmos_daily_cmip",               "all",  .true.,  "none", 2
+
+## Snowfall Flux, kg m-2 s-1 (longitude,latitude): Priority 1,3
+## day. CMIP5 (P-1), DCPP (P-3), LS3MIP (P-1), VIACSAB (P-1)
+ "moist",         "prsn",                   "prsn",          "atmos_daily_cmip",               "all",  .true.,  "none", 2
+
+## Sea Level Pressure, Pa (longitude,latitude)
+## day. CMIP5 (P-1), CORDEX (P-1), DAMIP (P-1), DCPP (P-1), DynVar (P-1), RFMIP (P-1), VIACSAB (P-1)
+ "flux",          "psl",                    "psl",           "atmos_daily_cmip",               "all",  .true.,  "none", 2
+
+## Surface Downwelling Longwave Radiation, W m-2 (longitude,latitude): Priority 1,3
+## day. CMIP5 (P-1), DCPP (P-3), LS3MIP (P-1), VIACSAB (P-1)
+ "radiation",     "rlds",                   "rlds",          "atmos_daily_cmip",               "all",  .true.,  "none", 2
+
+## Surface Upwelling Longwave Radiation, W m-2 (longitude,latitude)
+## day. CMIP5 (P-1), LS3MIP (P-1), VIACSAB (P-1)
+ "radiation",     "rlus",                   "rlus",          "atmos_daily_cmip",               "all",  .true.,  "none", 2
+
+## TOA Outgoing Longwave Radiation, W m-2 (longitude,latitude): Priority 1,3
+## day. CMIP (P-1), CMIP5 (P-1), DCPP (P-3), VIACSAB (P-1)
+ "radiation",     "rlut",                   "rlut",          "atmos_daily_cmip",               "all",  .true.,  "none", 2
+
+## Surface Downwelling Shortwave Radiation, W m-2 (longitude,latitude)
+## day. CMIP5 (P-1), DCPP (P-1), LS3MIP (P-1), VIACSAB (P-1)
+ "radiation",     "rsds",                   "rsds",          "atmos_daily_cmip",               "all",  .true.,  "none", 2
+
+## Surface Upwelling Shortwave Radiation, W m-2 (longitude,latitude)
+## day. CMIP5 (P-1), LS3MIP (P-1), VIACSAB (P-1)
+ "radiation",     "rsus",                   "rsus",          "atmos_daily_cmip",               "all",  .true.,  "none", 2
+
+## Near-Surface Wind Speed, m s-1 (longitude,latitude)
+## day. CMIP5 (P-1), RFMIP (P-1), VIACSAB (P-1)
+ "flux",          "sfcWind",                "sfcWind",       "atmos_daily_cmip",               "all",  .true.,  "none", 2
+
+## Daily Maximum Near-Surface Wind Speed, m s-1 (longitude,latitude)
+## day. CMIP5 (P-1), DCPP (P-1), PMIP (P-1), VIACSAB (P-1)
+#"UNKNOWN",       "sfcWindmax",             "sfcWindmax",    "atmos_daily_cmip",               "all",   .max.,  "none", 2
+
+## Near-Surface Air Temperature, K (longitude,latitude)
+## day. CMIP (P-1), CMIP5 (P-1), CORDEX (P-1), DCPP (P-1), DynVar (P-1), PMIP (P-1), RFMIP (P-1), VIACSAB (P-1)
+ "flux",          "tas",                    "tas",           "atmos_daily_cmip",               "all",  .true.,  "none", 2
+
+## Daily Maximum Near-Surface Air Temperature, K (longitude,latitude)
+## day. CMIP (P-1), CMIP5 (P-1), CORDEX (P-1), DCPP (P-1), GeoMIP (P-1), LS3MIP (P-1), LUMIP (P-1), PMIP (P-1), RFMIP (P-1), VIACSAB (P-1)
+#"UNKNOWN",       "tasmax",                 "tasmax",        "atmos_daily_cmip",               "all",   .max.,  "none", 2
+
+## Daily Minimum Near-Surface Air Temperature, K (longitude,latitude)
+## day. CMIP (P-1), CMIP5 (P-1), CORDEX (P-1), DCPP (P-1), GeoMIP (P-1), LS3MIP (P-1), LUMIP (P-1), PMIP (P-1), RFMIP (P-1), VIACSAB (P-1)
+#"UNKNOWN",       "tasmin",                 "tasmin",        "atmos_daily_cmip",               "all",   .min.,  "none", 2
+
+## Eastward Near-Surface Wind, m s-1 (longitude,latitude): Priority 1,2
+## day. CMIP5 (P-1), CORDEX (P-1), DCPP (P-2), DynVar (P-1), GeoMIP (P-1), VIACSAB (P-1)
+ "flux",          "uas",                    "uas",           "atmos_daily_cmip",               "all",  .true.,  "none", 2
+
+## Northward Near-Surface Wind, m s-1 (longitude,latitude): Priority 1,2
+## day. CMIP5 (P-1), CORDEX (P-1), DCPP (P-2), DynVar (P-1), GeoMIP (P-1), VIACSAB (P-1)
+ "flux",          "vas",                    "vas",           "atmos_daily_cmip",               "all",  .true.,  "none", 2
+
+
+###################
+# originally atmos_daily_plev8
+###################
+# these variables will first be output on 19 particular pressure levels, and then
+# later the desired 8 levels can be extracted. 
+
+## Relative Humidity, % (longitude,latitude,plev8)
+## day. CMIP5 (P-1), VIACSAB (P-1)
+ "moist_plev19",   "hur",                    "hur_unmsk",     "atmos_daily_cmip",         "all",  .true.,  "none", 2
+
+## Specific Humidity, 1 (longitude,latitude,plev8)
+## day. CMIP5 (P-1), CORDEX (P-1), VIACSAB (P-1)
+ "atmos_plev19",   "hus",                    "hus_unmsk",     "atmos_daily_cmip",         "all",  .true.,  "none", 2
+
+## Air Temperature, K (longitude,latitude,plev8)
+## day. CMIP5 (P-1), CORDEX (P-1), VIACSAB (P-1)
+ "atmos_plev19",   "ta",                     "ta_unmsk",      "atmos_daily_cmip",         "all",  .true.,  "none", 2
+
+## Eastward Wind, m s-1 (longitude,latitude,plev8)
+## day. CMIP (P-1), CMIP5 (P-1), CORDEX (P-1), VIACSAB (P-1)
+ "atmos_plev19",   "ua",                     "ua_unmsk",      "atmos_daily_cmip",         "all",  .true.,  "none", 2
+
+## Northward Wind, m s-1 (longitude,latitude,plev8)
+## day. CMIP (P-1), CMIP5 (P-1), CORDEX (P-1), VIACSAB (P-1)
+ "atmos_plev19",   "va",                     "va_unmsk",      "atmos_daily_cmip",         "all",  .true.,  "none", 2
+
+## geopotential height, m (longitude,latitude,plev8)
+ "atmos_plev19",   "zg",                     "zg_unmsk",      "atmos_daily_cmip",         "all",  .true.,  "none", 2
+
+
+## omega (=dp/dt), Pa s-1 (longitude,latitude,plev8)
+## day. CMIP5 (P-1), VIACSAB (P-1)
+ "atmos_plev19",   "wap",                    "wap_unmsk",     "atmos_daily_cmip",         "all",  .true.,  "none", 2
+
+
+#############
+## land_daily
+#############
+#
+### Total Run-off, kg m-2 s-1 (longitude,latitude)
+### day. CMIP5 (P-1), LS3MIP (P-1), VIACSAB (P-1)
+# "cmor_land",     "mrro",                   "mrro",          "land_daily",                "all",  .true.,  "none", 2
+#
+### Total Soil Moisture Content, kg m-2 (longitude,latitude): Priority 1,3
+### day. CMIP5 (P-1), DCPP (P-3)
+# "cmor_land",     "mrso",                   "mrso",          "land_daily",                "all",  .true.,  "none", 2
+#
+### Moisture in Upper Portion of Soil Column, kg m-2 (longitude,latitude)
+### day. CMIP5 (P-1), LS3MIP (P-1), VIACSAB (P-1)
+# "cmor_land",     "mrsos",                  "mrsos",         "land_daily",                "all",  .true.,  "none", 2
+#
+### Snow Area Fraction, % (longitude,latitude)
+### day. CMIP (P-1), CMIP5 (P-1), LS3MIP (P-1), VIACSAB (P-1)
+# "cmor_land",     "snc",                    "snc",           "land_daily",                "all",  .true.,  "none", 2
+#
+### Surface Snow Amount, kg m-2 (longitude,latitude)
+### day. CMIP5 (P-1), LS3MIP (P-1), VIACSAB (P-1)
+# "cmor_land",     "snw",                    "snw",           "land_daily",                "all",  .true.,  "none", 2
+#
+### Surface Temperature where Land or Sea Ice, K (longitude,latitude)
+### day. CMIP5 (P-1), CORDEX (P-1), PMIP (P-1), VIACSAB (P-1)
+ "flux",          "tslsi",                  "tslsi",         "atmos_daily_cmip",                "all",  .true.,  "none", 2
