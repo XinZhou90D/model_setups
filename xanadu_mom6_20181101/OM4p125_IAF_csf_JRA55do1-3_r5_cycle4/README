@@ -15,7 +15,11 @@ rm -r ./archive/restart/20010101 ./archive/history/20000101.nc ./archive/ascii/2
 
 Additionally the tidal amplitude file in `input/files/tidal_amplitude.v20181107.nc` was copied from gaea `/lustre/f2/dev/Niki.Zadeh/archive/input/xanadu/OM4p125_grid/tidal_amplitude.v20181107.nc`
 
+## Issue with missing icebergs
+The above files are missing the restart information for icebergs. I have copied the restart files again into `archive_alternative_with_icebergs` from gaea `/lustre/f2/scratch/gfdl/oar.gfdl.ogrp-account/work/CMIP6/OMIP/xanadu_mom6_20181101/OM4p125_IAF_csf_JRA55do1-3_r5_cycle4.o348634/RESTART`.
+
 
 ## TODO
+- Check the alternative files for consistency with the old ones...
 - write a script that copies folders automatically (how do I do this on gaea?)
 

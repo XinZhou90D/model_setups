@@ -1,5 +1,8 @@
 *.nc*
 *.mat
+*.tar*
+.gcp_mkdir
+*.zip
 
 input_files
 archive
